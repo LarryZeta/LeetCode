@@ -21,6 +21,7 @@ public class AddTwoNumbers {
         ListNode l3 = new ListNode(l1.val + l2.val);
         ListNode l = l3;
         int flag = 0;
+
         while(l1 != null ||l2 != null) {
             flag = 0;
             if(l.val >= 10) {
@@ -43,6 +44,7 @@ public class AddTwoNumbers {
         }
         if(flag == 1)
             l.next = new ListNode(1);
+
         return l3;
     }
 }
