@@ -30,7 +30,6 @@ package me.zly._20;
 
 
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Stack;
 
 public class UseStack {
@@ -38,14 +37,6 @@ public class UseStack {
     public boolean isValid(String s) {
 
         Stack<Character> stack = new Stack<>();
-//        HashSet<Character> left = new HashSet<>();
-//        HashSet<Character> right= new HashSet<>();
-//        left.add('(');
-//        left.add('[');
-//        left.add('{');
-//        right.add(')');
-//        right.add(']');
-//        right.add('}');
         HashMap<Character, Character> hashMap = new HashMap<>();
         hashMap.put('(', ')');
         hashMap.put('[', ']');
@@ -57,17 +48,20 @@ public class UseStack {
                 stack.push(s.charAt(i));
             }
             if (hashMap.containsValue(s.charAt(i))) {
-                if (stack.pop() == hashMap.get(s.charAt(i))) {
+                if (stack.empty() || s.charAt(i) != hashMap.get(stack.pop())) {
                     return false;
                 }
             }
         }
 
-        return true;
+        if (stack.empty())
+            return true;
+
+        return false;
     }
 
     public static void main(String[] args) {
-        String str = "(]";
+        String str = "]";
         UseStack useStack = new UseStack();
         System.out.println(useStack.isValid(str));
     }
