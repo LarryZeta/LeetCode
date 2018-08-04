@@ -32,8 +32,7 @@ public class LongestSubstringWithoutRepeatingCharacters {
                     if (lenth < l){
                         lenth = l;
                     }
-                }
-                else {
+                } else {
                     break;
                 }
             }
