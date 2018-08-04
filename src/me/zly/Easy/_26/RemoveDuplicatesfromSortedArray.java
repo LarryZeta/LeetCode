@@ -1,4 +1,4 @@
-package me.zly.EasyCollection.Arry;
+package me.zly.Easy._26;
 
 public class RemoveDuplicatesfromSortedArray {
 

@@ -1,4 +1,4 @@
-package me.zly._7;
+package me.zly.Easy._7;
 
 // Given a 32-bit signed integer, reverse digits of an integer.
 //

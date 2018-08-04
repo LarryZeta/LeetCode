@@ -1,4 +1,4 @@
-package me.zly._14;
+package me.zly.Easy._14;
 
 // Write a function to find the longest common prefix string amongst an array of strings.
 //

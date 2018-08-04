@@ -1,4 +1,4 @@
-package me.zly._20;
+package me.zly.Easy._20;
 
 // Given a string containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
 //

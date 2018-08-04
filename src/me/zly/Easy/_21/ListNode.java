@@ -1,4 +1,4 @@
-package me.zly._21;
+package me.zly.Easy._21;
 
 /**
  * Definition for singly-linked list.
