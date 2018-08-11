@@ -19,12 +19,11 @@ package me.zly.Easy._69;
 
 public class Implement_sqrt {
 
-
     public int mySqrt(int x) {
 
         int i = 1;
 
-        while (x > 0) {
+        while (x >= i) {
             x -= i;
             i += 2;
         }
