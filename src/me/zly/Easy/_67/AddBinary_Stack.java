@@ -14,7 +14,7 @@ package me.zly.Easy._67;
 
 import java.util.Stack;
 
-public class AddBinary {
+public class AddBinary_Stack {
 
     public String addBinary(String a, String b) {
 
