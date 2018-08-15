@@ -23,7 +23,6 @@ public class MergeSortedArray {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
 
-        int min = Math.min(m, n);
         int[] tmp = new int[m];
         int j = 0;
         int k = 0;

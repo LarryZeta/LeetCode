@@ -18,20 +18,45 @@ package me.zly.Hard._4;
 //
 //        The median is (2 + 3)/2 = 2.5
 
+
+// TODO Optimization from O(m + n) to O(log(m + n))
 public class MedianofTwoSortedArrays {
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
 
         int m = nums1.length;
         int n = nums2.length;
-        int[] array = new int[m + n];
+        int length = m + n;
+        int[] array = new int[length];
+        int i = 0;
+        int j = 0;
+        int k = 0;
 
-        for (int i = 0; i < m + n; i ++) {
-
+         while (j < m && k < n) {
+            if (nums1[j] < nums2[k]) {
+                array[i] = nums1[j];
+                ++ j;
+            } else {
+                array[i] = nums2[k];
+                ++ k;
+            }
+            ++ i;
         }
 
-        return 0;
+        while (j < m) {
+            array[i] = nums1[j];
+            ++ j;
+            ++ i;
+        }
 
+        while (k < n) {
+            array[i] = nums2[k];
+            ++ k;
+            ++ i;
+        }
+
+        if (length % 2 == 1) return array[length / 2];
+        else return (double)(array[length / 2 - 1] + array[length / 2]) / 2;
     }
 
 }
