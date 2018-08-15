@@ -35,6 +35,7 @@ package me.zly.Easy._100;
 // Output: false
 
 public class SameTree {
+
     public boolean isSameTree(TreeNode p, TreeNode q) {
 
         if (p == null && q == null) return true;
@@ -46,4 +47,5 @@ public class SameTree {
         return false;
 
     }
+
 }
