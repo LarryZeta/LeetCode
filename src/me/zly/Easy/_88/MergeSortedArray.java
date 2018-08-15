@@ -1,6 +1,7 @@
 package me.zly.Easy._88;
 
 import java.util.Queue;
+import java.util.SortedSet;
 import java.util.Stack;
 
 // Given two sorted integer arrays nums1 and nums2, merge nums2 into nums1 as one sorted array.
@@ -17,27 +18,45 @@ import java.util.Stack;
 //        nums2 = [2,5,6],       n = 3
 //
 //        Output: [1,2,2,3,5,6]
+
 public class MergeSortedArray {
 
     public void merge(int[] nums1, int m, int[] nums2, int n) {
 
-        Stack<Integer> stack = new Stack<>();
-        int j = 0, k = 0;
+        int min = Math.min(m, n);
+        int[] tmp = new int[m];
+        int j = 0;
+        int k = 0;
 
-        for (int i = 0; i < m + n; i ++) {
-            if (nums1[j] < nums2[k] && j < m) {
-                stack.push(nums1[j]);
-                ++ j;
-            } else {
-                stack.push(nums2[k]);
-                ++ k;
-            }
+        for (int i = 0; i < m; i ++) {
+            tmp[i] = nums1[i];
         }
 
-        for (int i = m + n - 1; i >= 0; i --) {
-            nums1[i] = stack.pop();
+        int i = 0;
+        while (j < m && k < n) {
+            if (tmp[j] > nums2[k]) {
+                nums1[i] = nums2[k];
+                ++ k;
+            } else {
+                nums1[i] = tmp[j];
+                ++ j;
+            }
+            ++ i;
+        }
+
+        while (j < m) {
+            nums1[i] = tmp[j];
+            ++ j;
+            ++ i;
+        }
+
+        while (k < n) {
+            nums1[i] = nums2[k];
+            ++ k;
+            ++ i;
         }
 
     }
+
 
 }
