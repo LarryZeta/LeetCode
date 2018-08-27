@@ -12,7 +12,7 @@ import me.zly.definition.ListNode;
  *        Output: 1->1->2->3->4->4
  */
 
-public class MergeTwoSortedLists_v2 {
+public class MergeTwoSortedListsV2 {
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 

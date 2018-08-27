@@ -20,7 +20,7 @@ package me.zly.easy._69;
  *                     the decimal part is truncated, 2 is returned.
  */
 
-public class Implement_sqrt {
+public class ImplementSqrt {
 
     public int mySqrt(int x) {
 

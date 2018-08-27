@@ -13,7 +13,7 @@ import me.zly.definition.ListNode;
  */
 
 
-public class MergeTwoSortedLists_Recursive {
+public class MergeTwoSortedListsRecursive {
 
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 

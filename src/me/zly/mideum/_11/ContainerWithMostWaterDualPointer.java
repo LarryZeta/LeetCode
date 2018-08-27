@@ -15,7 +15,7 @@ package me.zly.mideum._11;
  *        Input: [1,8,6,2,5,4,8,3,7]
  *        Output: 49
  */
-public class ContainerWithMostWater_DualPointer {
+public class ContainerWithMostWaterDualPointer {
 
 
     public int maxArea(int[] height) {

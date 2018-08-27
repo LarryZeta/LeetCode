@@ -25,16 +25,6 @@ package me.zly.easy._70;
  *        3. 2 steps + 1 step
  */
 
-public class ClimbingStairs_Recursive {
-
-    public int climbStairs(int n) {
-
-        if(n < 3) return n;
-        else return climbStairs(n - 1) + climbStairs(n - 2);
-
-    }
-
-    public static void main(String[] args) {
-        System.out.println(new ClimbingStairs_Recursive().climbStairs(44));
-    }
+// TODO
+public class ClimbingStairsDynamicPlanning {
 }

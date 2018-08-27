@@ -18,7 +18,7 @@ import java.util.Stack;
  *        Output: "10101"
  */
 
-public class AddBinary_Stack {
+public class AddBinaryStack {
 
     public String addBinary(String a, String b) {
 

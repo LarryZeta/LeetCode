@@ -53,7 +53,7 @@ import java.util.LinkedList;
  *             Thefore INT_MIN (−231) is returned.
  */
 
-public class StringtoInteger_atoi {
+public class StringtoIntegerAtoi {
 
     final int INT_MAX = 2147483647;
     final int INT_MIN = -2147483648;
@@ -120,7 +120,7 @@ public class StringtoInteger_atoi {
     }
 
     public static void main(String[] args) {
-        System.out.println(new StringtoInteger_atoi().myAtoi(" 4-"));
+        System.out.println(new StringtoIntegerAtoi().myAtoi(" 4-"));
     }
 
 }

@@ -21,7 +21,7 @@ package me.zly.easy._28;
  * For the purpose of this problem, we will return 0 when needle is an empty string. This is consistent to C's strstr() and Java's indexOf().
  */
 
-public class Implement_strStr {
+public class ImplementStrStr {
 
     public int strStr(String haystack, String needle) {
 

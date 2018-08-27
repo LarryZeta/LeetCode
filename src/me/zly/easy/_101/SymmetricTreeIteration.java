@@ -25,6 +25,6 @@ import me.zly.definition.TreeNode;
  */
 
 // TODO
-public class SymmetricTree_Iteration {
+public class SymmetricTreeIteration {
 
 }

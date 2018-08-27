@@ -28,51 +28,52 @@ package me.zly.easy._38;
  *        Output: "1211"
  */
 
-public class Count_and_Say {
+// TODO
+public class CountAndSayRecursive {
 
     public String countAndSay(int n) {
 
+        return countAndSay("", n);
+
+    }
+
+    public String countAndSay(String string, int n) {
+
         if (n == 0) {
-            return "";
+            return string;
         }
 
         if (n == 1) {
-            return "1";
-        }
 
-        StringBuffer stringBuffer = new StringBuffer();
-        stringBuffer.append(1);
+            StringBuffer stringBuffer = new StringBuffer(string);
+            stringBuffer.insert(0, 1);
+            string = stringBuffer.toString();
+            return string;
 
-        for (int i = 1; i < n; i ++) {
+        } else {
 
-            char c = stringBuffer.charAt(0);
             int count = 1;
-            StringBuffer stringBuffer1 = new StringBuffer();
+            int loc = 0;
 
-            for (int j = 1; j < stringBuffer.length(); j ++) {
-                if (stringBuffer.charAt(j) == c) {
+            for (int i = 1; i < string.length(); i ++) {
+
+                if (string.charAt(i) == string.charAt(i - 1)) {
                     ++ count;
                 } else {
-                    stringBuffer1.append(count);
-                    stringBuffer1.append(c);
-                    c = stringBuffer.charAt(j);
+                    StringBuffer stringBuffer = new StringBuffer();
+                    stringBuffer.append(count);
+                    stringBuffer.append(string.charAt(i - 1));
+                    string = stringBuffer.toString();
                     count = 1;
+
                 }
+
             }
 
-            stringBuffer1.append(count);
-            stringBuffer1.append(c);
 
-            stringBuffer = stringBuffer1;
+            return countAndSay(string, -- n);
 
         }
 
-        return stringBuffer.toString();
-
     }
-
-    public static void main(String[] args) {
-        System.out.print(new Count_and_Say().countAndSay(4));
-    }
-
 }

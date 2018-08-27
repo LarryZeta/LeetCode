@@ -21,7 +21,7 @@ import java.util.List;
 
 
 
-public class LetterCombinationsof_a_PhoneNumber {
+public class LetterCombinationsofAPhoneNumber {
 
     public List<String> letterCombinations(String digits) {
 

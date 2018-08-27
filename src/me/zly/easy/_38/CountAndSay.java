@@ -28,52 +28,51 @@ package me.zly.easy._38;
  *        Output: "1211"
  */
 
-// TODO
-public class Count_and_Say_Recursive {
+public class CountAndSay {
 
     public String countAndSay(int n) {
 
-        return countAndSay("", n);
-
-    }
-
-    public String countAndSay(String string, int n) {
-
         if (n == 0) {
-            return string;
+            return "";
         }
 
         if (n == 1) {
+            return "1";
+        }
 
-            StringBuffer stringBuffer = new StringBuffer(string);
-            stringBuffer.insert(0, 1);
-            string = stringBuffer.toString();
-            return string;
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append(1);
 
-        } else {
+        for (int i = 1; i < n; i ++) {
 
+            char c = stringBuffer.charAt(0);
             int count = 1;
-            int loc = 0;
+            StringBuffer stringBuffer1 = new StringBuffer();
 
-            for (int i = 1; i < string.length(); i ++) {
-
-                if (string.charAt(i) == string.charAt(i - 1)) {
+            for (int j = 1; j < stringBuffer.length(); j ++) {
+                if (stringBuffer.charAt(j) == c) {
                     ++ count;
                 } else {
-                    StringBuffer stringBuffer = new StringBuffer();
-                    stringBuffer.append(count);
-                    stringBuffer.append(string.charAt(i - 1));
-                    string = stringBuffer.toString();
+                    stringBuffer1.append(count);
+                    stringBuffer1.append(c);
+                    c = stringBuffer.charAt(j);
                     count = 1;
-
                 }
-
             }
 
+            stringBuffer1.append(count);
+            stringBuffer1.append(c);
 
-            return countAndSay(string, -- n);
+            stringBuffer = stringBuffer1;
 
         }
 
+        return stringBuffer.toString();
+
     }
+
+    public static void main(String[] args) {
+        System.out.print(new CountAndSay().countAndSay(4));
+    }
+
 }

@@ -30,7 +30,7 @@ import me.zly.definition.TreeNode;
  * ]
  */
 
-public class BinaryTreeLevelOrderTraversal_II {
+public class BinaryTreeLevelOrderTraversalII {
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
 
