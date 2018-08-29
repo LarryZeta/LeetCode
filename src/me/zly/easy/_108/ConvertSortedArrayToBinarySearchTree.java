@@ -22,17 +22,29 @@ import me.zly.definition.TreeNode;
  *  -10  5
  */
 
-// TODO
 public class ConvertSortedArrayToBinarySearchTree {
 
     public TreeNode sortedArrayToBST(int[] nums) {
 
-        int left = nums.length / 2;
-        int right = nums.length / 2 + 1;
+        if (nums == null || nums.length == 0) return null;
 
-        TreeNode root = new TreeNode(nums[left]);
+        else return sortedArrayToBST(nums, 0, nums.length - 1);
 
-        return root;
+    }
+
+    public TreeNode sortedArrayToBST(int[] nums, int begin, int end) {
+
+        if (begin > end) return null;
+
+        else {
+
+            int mid = begin + (end - begin) / 2;
+            TreeNode root = new TreeNode(nums[mid]);
+            root.left = sortedArrayToBST(nums, begin, mid - 1);
+            root.right = sortedArrayToBST(nums, mid + 1, end);
+            return root;
+
+        }
 
     }
 
