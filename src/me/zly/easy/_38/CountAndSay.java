@@ -71,8 +71,4 @@ public class CountAndSay {
 
     }
 
-    public static void main(String[] args) {
-        System.out.print(new CountAndSay().countAndSay(4));
-    }
-
 }

@@ -63,10 +63,4 @@ public class UseStack {
         return false;
     }
 
-    public static void main(String[] args) {
-        String str = "]";
-        UseStack useStack = new UseStack();
-        System.out.println(useStack.isValid(str));
-    }
-
 }

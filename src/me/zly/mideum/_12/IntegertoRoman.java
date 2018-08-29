@@ -125,17 +125,4 @@ public class IntegertoRoman {
 
     }
 
-    public static void main(String[] args) throws IOException {
-        BufferedReader in = new BufferedReader(new InputStreamReader(System.in));
-        String line;
-        while ((line = in.readLine()) != null) {
-            int num = Integer.parseInt(line);
-
-            String ret = new IntegertoRoman().intToRoman(num);
-
-            String out = (ret);
-
-            System.out.print(out);
-        }
-    }
 }

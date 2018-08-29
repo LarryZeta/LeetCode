@@ -79,10 +79,4 @@ public class ValidParentheses {
         return false;
     }
 
-    public static void main(String[] args) {
-        String str = "[([]])";
-        ValidParentheses v = new ValidParentheses();
-        System.out.println(v.isValid(str));
-    }
-
 }

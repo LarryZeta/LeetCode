@@ -34,7 +34,4 @@ public class ClimbingStairsRecursive {
 
     }
 
-    public static void main(String[] args) {
-        System.out.println(new ClimbingStairsRecursive().climbStairs(44));
-    }
 }
