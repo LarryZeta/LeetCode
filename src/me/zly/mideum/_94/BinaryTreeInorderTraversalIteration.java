@@ -1,7 +1,8 @@
 package me.zly.mideum._94;
 
-import java.util.LinkedList;
 import java.util.List;
+import java.util.LinkedList;
+import java.util.Stack;
 
 import me.zly.definition.TreeNode;
 
@@ -27,9 +28,29 @@ public class BinaryTreeInorderTraversalIteration {
 
     public List<Integer> inorderTraversal(TreeNode root) {
 
-       return null;
+        List<Integer> list = new LinkedList<>();
+
+        if (root == null) return list;
+
+        Stack<TreeNode> stack = new Stack<>();
+
+        while (root != null || !stack.isEmpty()) {
+
+            while (root != null) {
+                stack.push(root);
+                root = root.left;
+            }
+
+            if (!stack.isEmpty()) {
+                root = stack.pop();
+                list.add(root.val);
+                root = root.right;
+            }
+
+        }
+
+        return list;
 
     }
-
 
 }
