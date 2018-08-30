@@ -48,7 +48,7 @@ public class BalancedBinaryTree {
 
     }
 
-    public int getDepth(TreeNode root) {
+    int getDepth(TreeNode root) {
 
         if (root == null) return 0;
 

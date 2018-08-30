@@ -30,7 +30,6 @@ package me.zly.mideum._6;
  * P     I
  */
 
-// TODO
 public class ZigZagConversion {
 
     public String convert(String s, int numRows) {

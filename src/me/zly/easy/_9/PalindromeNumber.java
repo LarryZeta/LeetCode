@@ -1,5 +1,7 @@
 package me.zly.easy._9;
 
+import me.zly.easy._7.ReverseInteger;
+
 /**
  * @author zly
  *
@@ -25,28 +27,12 @@ package me.zly.easy._9;
 
 public class PalindromeNumber {
 
-    public int reverse(int x) {
-
-        long r = 0;
-
-        while (x != 0) {
-            r *= 10;
-            r += x % 10;
-            x /= 10;
-        }
-
-        if( r > 2147483647 || r < -2147483648)
-            r = 0;
-
-        return (int)r;
-    }
-
     public boolean isPalindrome(int x) {
 
-        if (x == reverse(x) && x >= 0)
-            return true;
-        else
-            return false;
+        if (x == new ReverseInteger().reverse(x) && x >= 0) return true;
+
+        else return false;
 
     }
+
 }

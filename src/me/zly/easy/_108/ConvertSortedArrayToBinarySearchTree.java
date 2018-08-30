@@ -32,7 +32,7 @@ public class ConvertSortedArrayToBinarySearchTree {
 
     }
 
-    public TreeNode sortedArrayToBST(int[] nums, int begin, int end) {
+    TreeNode sortedArrayToBST(int[] nums, int begin, int end) {
 
         if (begin > end) return null;
 

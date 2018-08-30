@@ -23,6 +23,7 @@ package me.zly.easy._7;
  */
 
 public class ReverseInteger {
+
     public int reverse(int x) {
 
         long r = 0;
@@ -38,4 +39,5 @@ public class ReverseInteger {
 
         return (int)r;
     }
+
 }

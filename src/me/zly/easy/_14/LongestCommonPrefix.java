@@ -21,6 +21,7 @@ package me.zly.easy._14;
  */
 
 public class LongestCommonPrefix {
+
     public String longestCommonPrefix(String[] strs) {
 
         if (strs.length == 0) {

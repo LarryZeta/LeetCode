@@ -37,7 +37,7 @@ public class CountAndSayRecursive {
 
     }
 
-    public String countAndSay(String string, int n) {
+    String countAndSay(String string, int n) {
 
         if (n == 0) {
             return string;
