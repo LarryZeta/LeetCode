@@ -2,6 +2,7 @@ package me.zly.mideum._19;
 
 import me.zly.definition.ListNode;
 
+import java.util.LinkedList;
 
 /**
  * @author zly
@@ -22,30 +23,23 @@ import me.zly.definition.ListNode;
  * Could you do this in one pass?
  */
 
-public class RemoveNthNodeFromEndofList {
+public class RemoveNthNodeFromEndofListOnePass {
 
     public ListNode removeNthFromEnd(ListNode head, int n) {
 
         ListNode node = head;
 
-        int length = 0;
+        while (n -- != 0) node = node.next;
 
-        while (node != null) {
-            node = node.next;
-            ++ length;
-        }
+        if (node == null) { head = head.next; return head;}
 
-        int loc = length - n;
-        node = head;
+        ListNode delnode = head;
 
-        if (loc == 0) head = head.next;
+        while (node.next != null) { delnode = delnode.next; node = node.next; }
 
-        else {
-            for (int i = 0; i < loc - 1; i ++) node = node.next;
-            ListNode tmp = node.next;
-            node.next = node.next.next;
-            tmp = null;
-        }
+        ListNode tmp = delnode.next;
+        delnode.next = delnode.next.next;
+        tmp = null;
 
         return head;
 
