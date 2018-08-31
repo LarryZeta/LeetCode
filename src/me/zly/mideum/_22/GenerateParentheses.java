@@ -1,13 +1,8 @@
 package me.zly.mideum._22;
 
 import java.util.ArrayList;
-import java.util.LinkedList;
-import java.util.List;
-
 
 /**
- * @author zly
- *
  * Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.
  *
  * For example, given n = 3, a solution set is:
@@ -23,22 +18,29 @@ import java.util.List;
 
 public class GenerateParentheses {
 
-    final int left = 1;
-    final int right = -1;
+    public ArrayList<String> generateParenthesis(int n) {
+        ArrayList<String> strings = new ArrayList<String>();
+        if (n == 0) return strings;
 
-    public List<String> generateParenthesis(int n) {
-
-        LinkedList<String> strings = new LinkedList<>();
-
-        ArrayList<ArrayList<Integer>> listArrayList = new ArrayList<ArrayList<Integer>>();
-        ArrayList<Integer> arrayList = new ArrayList<>();
-
-        int count = 0;
-        for (int i = 0; i < n; i ++) {
-
-        }
+        dfs(0, 0, "", strings, n);
 
         return strings;
+    }
+
+    private void dfs(int left, int right, String buffer, ArrayList<String> strings, int n) {
+
+        if (left == n && right == n) {
+            strings.add(buffer);
+            return;
+        }
+
+        if (left < n) {
+            dfs(left + 1, right, buffer + "(", strings, n);
+        }
+
+        if (left > right) {
+            dfs(left, right + 1, buffer + ")", strings, n);
+        }
 
     }
 
