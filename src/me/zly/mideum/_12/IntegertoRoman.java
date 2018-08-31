@@ -1,9 +1,5 @@
 package me.zly.mideum._12;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStreamReader;
-
 /**
  * @author zly
  *
