@@ -22,32 +22,23 @@ public class SwapNodesInPairs {
 
         if (head == null || head.next == null) return head;
 
-        ListNode node0 = head;
-        ListNode node1 = head.next;
+        ListNode node = head;
 
-        head = node1;
+        head = head.next;
 
-        ListNode next = node1.next;
-        node1.next = node0;
-        node0.next = next;
+        ListNode pre = null;
 
-        ListNode pre = node0;
-        node0 = next;
-        if (node0 != null) node1 = node0.next;
+        while (node != null && node.next != null) {
 
+            ListNode next = node.next;
 
-        while (node0 != null && node1 != null) {
+            node.next = next.next;
+            next.next = node;
 
-            next = node1.next;
-            node1.next = node0;
-            node0.next = next;
-            pre.next = node1;
-            pre = node0;
+            if (pre != null) pre.next = next;
+            pre = node;
 
-            if (next != null && next.next != null) {
-                node0 = next;
-                node1 = node0.next;
-            } else break;
+            node = node.next;
 
         }
 
