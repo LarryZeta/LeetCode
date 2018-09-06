@@ -52,34 +52,57 @@ package me.zly.hard._10;
 // TODO
 public class RegularExpressionMatching {
 
+//    public boolean isMatch(String s, String p) {
+//
+//        if (s == null || p == null || s.isEmpty() || p.isEmpty()) return false;
+//
+//        int slength = s.length();
+//        int plength = p.length();
+//        int i = 0;
+//        int j = 0;
+//
+//        while (i < slength && j < plength) {
+//            char scharAt = s.charAt(i);
+//            char pcharAt = p.charAt(j);
+//            if (scharAt == pcharAt || pcharAt == '.') {
+//                ++ i;
+//                ++ j;
+//            } else if (pcharAt == '*' && j - 1 >= 0) {
+//                char previous = p.charAt(j - 1);
+//                if (scharAt == previous || previous == '.') ++ i;
+//                else ++ j;
+//            } else if (j + 1 < plength) {
+//                if(p.charAt(j + 1) == '*') j += 2;
+//            } else return false;
+//        }
+//
+//        if (i == slength && j == plength) return true;
+//        else if (i == slength && j == plength - 1 && p.charAt(j) == '*') return true;
+//        else return false;
+//
+//    }
+
     public boolean isMatch(String s, String p) {
+        return isMatch(s, s.length() - 1, p, p.length() - 1);
+    }
 
-        if (s == null || p == null || s.isEmpty() || p.isEmpty()) return false;
+    boolean isMatch(String s, int i, String p, int j) {
 
-        int slength = s.length();
-        int plength = p.length();
-        int i = 0;
-        int j = 0;
+        if (i == -1)
+            if (j == -1) return true;
+            else return false;
 
-        while (i < slength && j < plength) {
-            char scharAt = s.charAt(i);
-            char pcharAt = p.charAt(j);
-            if (scharAt == pcharAt || pcharAt == '.') {
-                ++ i;
-                ++ j;
-            } else if (pcharAt == '*' && j - 1 >= 0) {
-                char previous = p.charAt(j - 1);
-                if (scharAt == previous || previous == '.') ++ i;
-                else ++ j;
-            } else if (j + 1 < plength) {
-                if(p.charAt(j + 1) == '*') j += 2;
-            } else return false;
+        if (p.charAt(j) == '*') {
+            if ((s.charAt(i) == p.charAt(j - 1) || p.charAt(j - 1) == '.') && i > -1) {
+                if (isMatch(s, i - 1, p, j)) {
+                    return true;
+                }
+            } else return isMatch(s, i, p, j - 2);
         }
 
-        if (i == slength && j == plength) return true;
-        else if (i == slength && j == plength - 1 && p.charAt(j) == '*') return true;
-        else return false;
+        if (s.charAt(i) == p.charAt(j - 1) || p.charAt(j - 1) == '.') return isMatch(s, i - 1, p, j - 1);
 
+        return false;
     }
 
 }
