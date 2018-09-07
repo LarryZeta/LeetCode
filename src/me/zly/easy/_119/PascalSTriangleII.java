@@ -2,7 +2,6 @@ package me.zly.easy._119;
 
 import me.zly.easy._118.PascalSTriangle;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
