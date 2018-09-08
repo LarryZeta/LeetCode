@@ -24,7 +24,10 @@ import java.util.Stack;
  * minStack.getMin();   --> Returns -2.
  */
 
+
 public class MinStack {
+
+    final int error = Integer.MAX_VALUE;
 
     ListNode top;
     Stack<Integer> min = new Stack<>();
@@ -55,12 +58,12 @@ public class MinStack {
 
     public int top() {
         if (top != null) return top.val;
-        else return 0;
+        else return error;
     }
 
     public int getMin() {
         if (!min.isEmpty()) return min.peek();
-        else return 0;
+        else return error;
     }
 
 }
