@@ -20,31 +20,24 @@ package me.zly.easy._66;
  *        Explanation: The array represents the integer 4321.
  */
 
-public class PlusOne {
+public class PlusOneOpt {
 
     public int[] plusOne(int[] digits) {
 
         int length = digits.length;
 
-        ++ digits[length - 1];
-
-        for (int i = 1; i < length; i ++) {
-            if (digits[length - i] == 10) {
-                ++ digits[length - i - 1];
-                digits[length - i] = 0;
+        for (int i = length - 1; i > -1; i --) {
+            if (digits[i] == 9) digits[i] = 0;
+            else {
+                digits[i] += 1;
+                return digits;
             }
-            else break;
         }
 
-        if (digits[0] == 10) {
-            int[] d = new int[length + 1];
-            d[0] = 1;
-            return d;
-        }
-
-        return digits;
+        int[] ints = new int[length + 1];
+        ints[0] = 1;
+        return ints;
 
     }
 
 }
-
