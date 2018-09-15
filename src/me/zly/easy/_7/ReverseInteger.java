@@ -34,8 +34,7 @@ public class ReverseInteger {
             x /= 10;
         }
 
-        if( r > Integer.MAX_VALUE || r < Integer.MIN_VALUE)
-            r = 0;
+        if( r > Integer.MAX_VALUE || r < Integer.MIN_VALUE) return 0;
 
         return (int)r;
     }
