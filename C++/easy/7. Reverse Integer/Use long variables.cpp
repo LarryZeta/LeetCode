@@ -29,7 +29,7 @@ public:
 			x /= 10;
 		}
 
-		if (r > 2147483647 || r < -2147483648)
+		if (r > INT_MAX || r < INT_MIN)
 			r = 0;
 
 		return (int)r;
