@@ -31,3 +31,5 @@ out/
 *.vcxproj.filters
 *.vcxproj.user
 *.sln
+
+.vscode
