@@ -33,3 +33,5 @@ out/
 *.sln
 
 .vscode
+
+cmake-build-debug

@@ -12,11 +12,13 @@
  *        Input: "cbbd"
  *        Output: "bb"
  */
- 
- // TODO
+
+#include <string>
+
+// TODO
  class Solution {
 public:
-    string longestPalindrome(string s) {
+    std::string longestPalindrome(std::string s) {
         
     }
 };

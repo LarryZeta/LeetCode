@@ -12,13 +12,9 @@
 //        Output: 7 -> 0 -> 8
 //        Explanation: 342 + 465 = 807.
 
-#define NULL 0
 
-struct ListNode {
-     int val;
-     ListNode *next;
-     ListNode(int x) : val(x), next(NULL) {}
-};
+#include <cstddef>
+#include <definition/ListNode.h>
 
 class Solution {
 public:
