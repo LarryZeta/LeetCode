@@ -26,9 +26,9 @@ import java.util.HashSet;
  * The linked lists must retain their original structure after the function returns.
  * You may assume there are no cycles anywhere in the entire linked structure.
  *
- * Time complexity : O(m+n)O(m+n).
+ * Time complexity : O(m+n).
  *
- * Space complexity : O(m)O(m) or O(n)O(n).
+ * Space complexity : O(m) or O(n).
  */
 
 public class IntersectionOfTwoLinkedListsUsingHashTable {
