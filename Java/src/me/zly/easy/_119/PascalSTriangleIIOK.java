@@ -20,6 +20,8 @@ import java.util.List;
  * Follow up:
  *
  * Could you optimize your algorithm to use only O(k) extra space?
+ *
+ * Space complexity: O(k)
  */
 
 public class PascalSTriangleIIOK {
