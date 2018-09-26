@@ -37,40 +37,30 @@ public class IntersectionOfTwoLinkedLists {
 
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
 
-        if(headA==null||headB==null) return null;
+        if(headA == null||headB == null) return null;
 
         ListNode nodeA = headA;
         ListNode nodeB = headB;
 
-        int indexA = 1;
-        int indexB = 1;
+        int lengthA = 1;
+        int lengthB = 1;
 
         while(nodeA!=null) {
             nodeA = nodeA.next;
-            ++ indexA;
+            ++ lengthA;
         }
 
         while(nodeB!=null) {
             nodeB = nodeB.next;
-            ++ indexB;
+            ++ lengthB;
         }
 
         nodeA = headA;
         nodeB = headB;
 
-        if(indexB >= indexA) {
-            int minus = indexB - indexA;
-            while(minus != 0) {
-                nodeB = nodeB.next;
-                -- minus;
-            }
-        } else {
-            int minus = indexA - indexB;
-            while(minus != 0) {
-                nodeA = nodeA.next;
-                -- minus;
-            }
-        }
+        int diff = Math.abs(lengthA - lengthB);
+        if (lengthA > lengthB) for (int i = 0; i < diff; i ++) nodeA = nodeA.next;
+        else for (int i = 0; i < diff; i ++) nodeB = nodeB.next;
 
         while(nodeA != null && nodeB != null) {
             if(nodeA == nodeB) return nodeA;
