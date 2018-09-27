@@ -24,23 +24,9 @@ public class MajorityElement {
 
     public int majorityElement(int[] nums) {
 
-        if (nums == null || nums.length == 0) return 0;
-
         Arrays.sort(nums);
 
-        int val = 0;
-        int count = 0;
-
-        for (int i = 0; i < nums.length; i ++) {
-            if (nums[i] != val) {
-                val = nums[i];
-                count = 1;
-            } else ++ count;
-
-            if (count > nums.length / 2) return val;
-        }
-
-        return 0;
+        return nums[nums.length / 2];
 
     }
 
