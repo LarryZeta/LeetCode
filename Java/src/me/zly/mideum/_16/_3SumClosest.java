@@ -40,7 +40,11 @@ public class _3SumClosest {
                 else return target;
 
                 int diff = Math.abs(value - target);
-                if (diff < min) { ret = value; min = diff;}
+                if (diff < min) {
+                    ret = value;
+                    min = diff;
+                }
+
             }
         }
 
