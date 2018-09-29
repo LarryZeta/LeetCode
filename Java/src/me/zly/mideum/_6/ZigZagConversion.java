@@ -41,23 +41,17 @@ public class ZigZagConversion {
 
         StringBuffer[] stringBuffer = new StringBuffer[numRows];
 
-        for (int i = 0; i < numRows; i ++) {
-            stringBuffer[i] = new StringBuffer();
-        }
+        for (int i = 0; i < numRows; i ++) stringBuffer[i] = new StringBuffer();
 
         for (int i = 0; i < s.length(); i ++) {
             int loc = i % divisor;
-            if (loc > level) {
-                loc = 2 * level - loc;
-            }
+            if (loc > level) loc = 2 * level - loc;
             stringBuffer[loc].append(s.charAt(i));
         }
 
         StringBuffer buffer = new StringBuffer();
 
-        for (int i = 0; i < numRows; i ++) {
-            buffer.append(stringBuffer[i]);
-        }
+        for (int i = 0; i < numRows; i ++) buffer.append(stringBuffer[i]);
 
         return buffer.toString();
 

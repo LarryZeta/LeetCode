@@ -56,66 +56,59 @@ public class IntegertoRoman {
         int value;
 
         value = num / 1000;
-        num %= 1000;
-        for (int i = 0; i < value; i ++) {
-            stringBuffer.append('M');
-        }
+        num = num % 1000;
+        for (int i = 0; i < value; i ++) stringBuffer.append('M');
 
         value = num / 100;
         if (value == 4) {
             stringBuffer.append('C');
             stringBuffer.append('D');
-            num -= 400;
+            num = num - 400;
         } else if (value == 9) {
             stringBuffer.append('C');
             stringBuffer.append('M');
-            num -= 900;
+            num = num - 900;
         } else if (value > 4){
-            num -= 500;
+            num = num - 500;
             stringBuffer.append('D');
         }
 
         value = num / 100;
-        num %= 100;
-        for (int i = 0; i < value; i ++) {
-            stringBuffer.append('C');
-        }
+        num = num % 100;
+        for (int i = 0; i < value; i ++) stringBuffer.append('C');
 
         value = num / 10;
         if (value == 4) {
             stringBuffer.append('X');
             stringBuffer.append('L');
-            num -= 40;
+            num = num - 40;
         } else if (value == 9) {
             stringBuffer.append('X');
             stringBuffer.append('C');
-            num -= 90;
+            num = num - 90;
         } else if (value > 4){
             stringBuffer.append('L');
-            num -= 50;
+            num = num - 50;
         }
 
         value = num / 10;
-        num %= 10;
-        for (int i = 0; i < value; i ++) {
-            stringBuffer.append('X');
-        }
+        num = num % 10;
+        for (int i = 0; i < value; i ++) stringBuffer.append('X');
 
         if (num == 4) {
             stringBuffer.append('I');
             stringBuffer.append('V');
-            num -= 4;
+            num = num - 4;
         } else if (num == 9) {
             stringBuffer.append('I');
             stringBuffer.append('X');
-            num -=9;
+            num = num - 9;
         } else if (num > 4){
             stringBuffer.append('V');
-            num -=5;
+            num = num - 5;
         }
-        for (int i = 0; i < num; i ++) {
-            stringBuffer.append('I');
-        }
+
+        for (int i = 0; i < num; i ++) stringBuffer.append('I');
 
         return stringBuffer.toString();
 

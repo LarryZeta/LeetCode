@@ -22,7 +22,7 @@ public class MaximumSubarray {
         int value = 0;
 
         for (int i = 0; i < nums.length; i ++) {
-            value += nums[i];
+            value = value + nums[i];
             if (value > max) {
                 max = value;
             }

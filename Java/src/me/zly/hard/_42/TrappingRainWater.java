@@ -36,13 +36,13 @@ public class TrappingRainWater {
 		
 		for (int i = 0; i < heighestloc; i ++) {
 			if (side < height[i]) side = height[i];
-			else res += (side - height[i]);
+			else res = res + (side - height[i]);
 		}
 		
 		side = 0;
 		for (int i = height.length - 1; i > heighestloc; i --) {
 			if (side < height[i]) side = height[i];
-			else res += (side - height[i]);
+			else res = res + (side - height[i]);
 		}
 		
 		return res;

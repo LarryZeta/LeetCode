@@ -44,7 +44,7 @@ public class DivideTwoIntegers {
             }
 
             result += 1 << (numShift - 1);
-            pDividend -= (pDivisor << (numShift-1));
+            pDividend = pDividend - (pDivisor << (numShift-1));
         }
 
         if((dividend>0 && divisor>0) || (dividend<0 && divisor<0)) return result;

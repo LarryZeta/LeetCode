@@ -47,12 +47,12 @@ public class IntersectionOfTwoLinkedLists {
 
         while(nodeA!=null) {
             nodeA = nodeA.next;
-            ++ lengthA;
+            lengthA ++;
         }
 
         while(nodeB!=null) {
             nodeB = nodeB.next;
-            ++ lengthB;
+            lengthB ++;
         }
 
         nodeA = headA;

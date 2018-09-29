@@ -50,32 +50,24 @@ public class ValidParentheses {
         int value = 0;
 
         for (int i = 0; i < s.length(); i ++) {
-            value += priority.get(s.charAt(i));
-            if (value < 0) {
-                return false;
-            }
+            value = value + priority.get(s.charAt(i));
+            if (value < 0) return false;
+
         }
 
         for (int i = 0; i < s.length() - 1; i ++) {
             int now = priority.get(s.charAt(i));
             int next = priority.get(s.charAt(i + 1));
             // with priority.
-            if (now * next > 0 && now < next) {
-                return false;
-            }
+            if (now * next > 0 && now < next) return false;
+
             if (now > 0 && next < 0) {
-                if (now + next != 0) {
-                    return false;
-                }
+                if (now + next != 0) return false;
             }
-            if (now < 0 && next > 0) {
-                ++ i;
-            }
+            if (now < 0 && next > 0) ++ i;
         }
 
-        if (value == 0) {
-            return true;
-        }
+        if (value == 0) return true;
 
         return false;
     }

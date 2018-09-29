@@ -27,16 +27,10 @@ public class LongestSubstringWithoutRepeatingCharacters {
                 String substr = s.substring(i, j + 1);
                 HashSet<Character> substrhs = new HashSet<>();
                 int l = substr.length();
-                for (int k = 0; k < l; k ++) {
-                    substrhs.add(substr.charAt(k));
-                }
+                for (int k = 0; k < l; k ++) substrhs.add(substr.charAt(k));
                 if (l == substrhs.size()) {
-                    if (length < l){
-                        length = l;
-                    }
-                } else {
-                    break;
-                }
+                    if (length < l) length = l;
+                } else break;
             }
         }
 

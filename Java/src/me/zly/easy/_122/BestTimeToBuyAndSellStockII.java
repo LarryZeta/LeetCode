@@ -42,13 +42,13 @@ public class BestTimeToBuyAndSellStockII {
 
         for (int i = 1; i < prices.length; i ++) {
             if (prices[i] < sale) {
-                profit += sale - buy;
+                profit = profit + sale - buy;
                 buy = prices[i];
                 sale = prices[i];
             }
             else sale = prices[i];
         }
-        profit += sale - buy;
+        profit = profit + sale - buy;
 
         return profit;
     }

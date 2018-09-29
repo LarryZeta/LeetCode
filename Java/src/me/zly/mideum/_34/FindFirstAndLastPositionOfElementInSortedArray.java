@@ -47,9 +47,9 @@ public class FindFirstAndLastPositionOfElementInSortedArray {
 
         if (begin != -1) {
 
-            while (begin > 0 && nums[begin - 1] == nums[begin]) -- begin;
+            while (begin > 0 && nums[begin - 1] == nums[begin]) begin --;
 
-            while (end < nums.length - 1 && nums[end + 1] == nums[end]) ++ end;
+            while (end < nums.length - 1 && nums[end + 1] == nums[end]) end ++;
 
         }
 

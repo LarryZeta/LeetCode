@@ -62,9 +62,7 @@ public class BinaryTreeLevelOrderTraversalII {
         }
 
         List<List<Integer>> lists = new LinkedList<>();
-        while (!stack.isEmpty()) {
-            lists.add(stack.pop());
-        }
+        while (!stack.isEmpty()) lists.add(stack.pop());
 
         return lists;
 

@@ -46,8 +46,7 @@ public class SameTree {
 
         if (p == null && q == null) return true;
         else if (p != null && q != null && p.val == q.val) {
-            if(isSameTree(p.left, q.left) && isSameTree(p.right, q.right))
-                return true;
+            if(isSameTree(p.left, q.left) && isSameTree(p.right, q.right)) return true;
         }
 
         return false;

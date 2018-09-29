@@ -26,26 +26,24 @@ public class AddTwoNumbers {
 
         while(l1 != null ||l2 != null) {
             flag = 0;
+
             if(l.val >= 10) {
                 flag = 1;
-                l.val %= 10;
+                l.val = l.val % 10;
             }
-            if(l1 != null)
-                l1 = l1.next;
-            if(l2 != null)
-                l2 = l2.next;
-            if(l1 != null && l2 != null) {
-                l.next = new ListNode(l1.val + l2.val + flag);
-            } else if(l1 == null && l2 != null) {
-                l.next = new ListNode(l2.val + flag);
-            } else if(l2 == null && l1 !=null) {
-                l.next = new ListNode(l1.val + flag);
-            }
-            if(l.next != null)
-                l = l.next;
+
+            if(l1 != null) l1 = l1.next;
+
+            if(l2 != null) l2 = l2.next;
+
+            if(l1 != null && l2 != null) l.next = new ListNode(l1.val + l2.val + flag);
+            else if(l1 == null && l2 != null) l.next = new ListNode(l2.val + flag);
+            else if(l2 == null && l1 !=null) l.next = new ListNode(l1.val + flag);
+
+            if(l.next != null) l = l.next;
         }
-        if(flag == 1)
-            l.next = new ListNode(1);
+
+        if(flag == 1) l.next = new ListNode(1);
 
         return l3;
     }

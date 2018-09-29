@@ -55,9 +55,6 @@ import java.util.LinkedList;
 
 public class StringtoIntegerAtoi {
 
-    final int INT_MAX = 2147483647;
-    final int INT_MIN = -2147483648;
-
     public int myAtoi(String str) {
 
         LinkedList<Integer> linkedList = new LinkedList<>();
@@ -102,16 +99,16 @@ public class StringtoIntegerAtoi {
         if (isnegative) {
             while (!linkedList.isEmpty()) {
                 tmp = linkedList.pop();
-                ret *= 10;
-                ret -= tmp;
-                if (ret < INT_MIN) return INT_MIN;
+                ret = ret * 10;
+                ret = ret - tmp;
+                if (ret < Integer.MIN_VALUE) return Integer.MIN_VALUE;
             }
         } else {
             while (!linkedList.isEmpty()) {
                 tmp = linkedList.pop();
-                ret *= 10;
-                ret += tmp;
-                if (ret > INT_MAX) return INT_MAX;
+                ret = ret * 10;
+                ret = ret + tmp;
+                if (ret > Integer.MAX_VALUE) return Integer.MAX_VALUE;
             }
         }
 

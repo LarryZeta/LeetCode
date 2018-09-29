@@ -19,7 +19,7 @@ import java.util.ArrayList;
 public class GenerateParentheses {
 
     public ArrayList<String> generateParenthesis(int n) {
-        ArrayList<String> strings = new ArrayList<String>();
+        ArrayList<String> strings = new ArrayList<>();
         if (n == 0) return strings;
 
         dfs(0, 0, "", strings, n);

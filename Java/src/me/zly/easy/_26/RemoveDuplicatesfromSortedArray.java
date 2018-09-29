@@ -55,7 +55,7 @@ public class RemoveDuplicatesfromSortedArray {
             if (nums[i] != value) {
                 value = nums[i];
                 nums[l] = nums[i];
-                ++ l;
+                l ++;
             }
         }
 

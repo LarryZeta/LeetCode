@@ -24,11 +24,9 @@ public class FactorialTrailingZeroes {
 
         int ret = 0;
 
-        if (n == 0) return 0;
-
-        while(n > 0) {
+        while(n != 0) {
             ret += n / 5;
-            n /= 5;
+            n = n / 5;
         }
 
         return ret;

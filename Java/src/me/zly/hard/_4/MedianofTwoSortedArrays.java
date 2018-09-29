@@ -38,24 +38,24 @@ public class MedianofTwoSortedArrays {
          while (j < m && k < n) {
             if (nums1[j] < nums2[k]) {
                 array[i] = nums1[j];
-                ++ j;
+                j ++;
             } else {
                 array[i] = nums2[k];
-                ++ k;
+                k ++;
             }
-            ++ i;
+            i ++;
         }
 
         while (j < m) {
             array[i] = nums1[j];
-            ++ j;
-            ++ i;
+            j ++;
+            i ++;
         }
 
         while (k < n) {
             array[i] = nums2[k];
-            ++ k;
-            ++ i;
+            k ++;
+            i ++;
         }
 
         if (length % 2 == 1) return array[length / 2];

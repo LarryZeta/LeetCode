@@ -39,8 +39,8 @@ public class AddBinaryStack {
 
         while (!stack_a.empty() || !stack_b.empty() || flag == 1) {
             int value = flag;
-            if (!stack_a.empty()) value += stack_a.pop();
-            if (!stack_b.empty()) value += stack_b.pop();
+            if (!stack_a.empty()) value = value + stack_a.pop();
+            if (!stack_b.empty()) value = value + stack_b.pop();
             flag = 0;
             if (value > 1) {
                 flag = 1;

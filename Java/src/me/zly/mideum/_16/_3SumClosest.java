@@ -35,8 +35,8 @@ public class _3SumClosest {
 
                 int value = nums[i] + nums[j] + nums[k];
 
-                if (value < target) ++ j;
-                else if (value > target) -- k;
+                if (value < target) j ++;
+                else if (value > target) k --;
                 else return target;
 
                 int diff = Math.abs(value - target);

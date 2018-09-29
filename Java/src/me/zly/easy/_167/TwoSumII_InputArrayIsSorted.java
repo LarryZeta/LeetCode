@@ -27,8 +27,8 @@ public class TwoSumII_InputArrayIsSorted {
 
         while (index1 < index2) {
             int tmp = numbers[index1] + numbers[index2];
-            if (tmp < target) ++ index1;
-            else if (tmp > target) -- index2;
+            if (tmp < target) index1 ++;
+            else if (tmp > target) index2 --;
             else return new int[] { index1 + 1, index2 + 1 };
         }
 

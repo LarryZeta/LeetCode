@@ -50,9 +50,8 @@ public class CountAndSay {
             StringBuffer stringBuffer1 = new StringBuffer();
 
             for (int j = 1; j < stringBuffer.length(); j ++) {
-                if (stringBuffer.charAt(j) == c) {
-                    ++ count;
-                } else {
+                if (stringBuffer.charAt(j) == c) count ++;
+                else {
                     stringBuffer1.append(count);
                     stringBuffer1.append(c);
                     c = stringBuffer.charAt(j);

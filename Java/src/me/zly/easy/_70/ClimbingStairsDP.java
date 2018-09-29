@@ -26,5 +26,5 @@ package me.zly.easy._70;
  */
 
 // TODO
-public class ClimbingStairsDynamicPlanning {
+public class ClimbingStairsDP {
 }

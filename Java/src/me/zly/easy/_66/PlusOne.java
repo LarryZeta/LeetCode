@@ -26,7 +26,7 @@ public class PlusOne {
 
         int length = digits.length;
 
-        ++ digits[length - 1];
+        digits[length - 1] ++;
 
         for (int i = 1; i < length; i ++) {
             if (digits[length - i] == 10) {

@@ -35,8 +35,8 @@ public class DivideTwoIntegersSlow {
 
         else if(dividend == Integer.MIN_VALUE) {
             if (divisor == -1) return Integer.MAX_VALUE;
-            dividend += Math.abs(divisor);
-            ++ res;
+            dividend = dividend + Math.abs(divisor);
+            res ++;
         }
 
 
@@ -46,7 +46,7 @@ public class DivideTwoIntegersSlow {
         divisor = Math.abs(divisor);
 
         while (dividend > 0) {
-            while ((dividend -= divisor) >= 0) ++ res;
+            while ((dividend = dividend - divisor) >= 0) res ++;
         }
 
         return isNege ? -res : res;

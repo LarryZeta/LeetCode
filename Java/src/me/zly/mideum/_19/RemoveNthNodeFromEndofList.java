@@ -32,7 +32,7 @@ public class RemoveNthNodeFromEndofList {
 
         while (node != null) {
             node = node.next;
-            ++ length;
+            length ++;
         }
 
         int loc = length - n;

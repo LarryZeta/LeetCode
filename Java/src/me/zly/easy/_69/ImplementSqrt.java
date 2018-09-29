@@ -27,11 +27,11 @@ public class ImplementSqrt {
         int i = 1;
 
         while (x >= i) {
-            x -= i;
-            i += 2;
+            x = x - i;
+            i = i + 2;
         }
 
-        return i/2;
+        return i / 2;
 
     }
 

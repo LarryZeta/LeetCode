@@ -36,8 +36,7 @@ public class SymmetricTree {
 
         if (p == null && q == null) return true;
         else if (p != null && q != null && p.val == q.val) {
-            if(isSymmetric(p.left, q.right) && isSymmetric(p.right, q.left))
-                return true;
+            if(isSymmetric(p.left, q.right) && isSymmetric(p.right, q.left)) return true;
         }
 
         return false;

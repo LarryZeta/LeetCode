@@ -68,11 +68,11 @@ public class RomantoInteger {
             int value = rti.get(s.charAt(i));
             int next = rti.get(s.charAt(i + 1));
             if ( value < next)
-                result -= value;
+                result = result - value;
             else
-                result += value;
+                result = result + value;
         }
-        result += rti.get(s.charAt(s.length() - 1));
+        result = result + rti.get(s.charAt(s.length() - 1));
 
         return result;
 

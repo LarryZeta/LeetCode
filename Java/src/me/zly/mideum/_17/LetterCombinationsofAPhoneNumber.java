@@ -59,9 +59,7 @@ public class LetterCombinationsofAPhoneNumber {
             stringBufferList = list;
         }
 
-        for (int i = 0; i < stringBufferList.size(); i ++) {
-            stringList.add(stringBufferList.get(i).toString());
-        }
+        for (int i = 0; i < stringBufferList.size(); i ++) stringList.add(stringBufferList.get(i).toString());
 
         return stringList;
 

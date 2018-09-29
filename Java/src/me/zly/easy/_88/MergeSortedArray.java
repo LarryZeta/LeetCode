@@ -35,24 +35,24 @@ public class MergeSortedArray {
         while (j < m && k < n) {
             if (tmp[j] > nums2[k]) {
                 nums1[i] = nums2[k];
-                ++ k;
+                k ++;
             } else {
                 nums1[i] = tmp[j];
-                ++ j;
+                j ++;
             }
-            ++ i;
+            i ++;
         }
 
         while (j < m) {
             nums1[i] = tmp[j];
-            ++ j;
-            ++ i;
+            j ++;
+            i ++;
         }
 
         while (k < n) {
             nums1[i] = nums2[k];
-            ++ k;
-            ++ i;
+            k ++;
+            i ++;
         }
 
     }
