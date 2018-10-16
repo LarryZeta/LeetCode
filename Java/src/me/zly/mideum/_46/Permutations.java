@@ -27,8 +27,21 @@ public class Permutations {
     public List<List<Integer>> permute(int[] nums) {
 
         List<List<Integer>> lists = new ArrayList<>();
+        Node tree = new Node(0);
 
-        return lists;
+        for (int i = 0; i < nums.length; i++) {
+            tree.childs.add(new Node(nums[i]));
+            for (int j = i; j < nums.length; j++) {
 
+            }
+        }
+
+        return null;
     }
+}
+
+class Node {
+    int val;
+    ArrayList<Node> childs;
+    Node(int x) {this.val = x;}
 }

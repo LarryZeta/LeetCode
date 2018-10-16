@@ -24,6 +24,18 @@ public class NextPermutation {
 
     public void nextPermutation(int[] nums) {
 
+        if (nums.length == 0) return;
+        int i = nums.length - 2;
+        while (i >= 0 && nums[i] > nums[i + 1]) i --;
+
+
+        int value = nums[i - 1];
+        int j = i - 1;
+        while (nums[i] < value) i ++;
+
+//        swap(nums[j], i + 1);
+        nums[j] = nums[i + 1];
+        nums[i + 1] = value;
 
     }
 
