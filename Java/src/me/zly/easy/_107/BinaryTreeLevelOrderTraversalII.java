@@ -2,7 +2,6 @@ package me.zly.easy._107;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Queue;
 import java.util.Stack;
 
 import me.zly.definition.TreeNode;
@@ -39,23 +38,24 @@ public class BinaryTreeLevelOrderTraversalII {
         List<Integer> integers = new LinkedList<>();
         integers.add(root.val);
 
-        Queue<TreeNode> treeNodeQueue;
-        Queue<TreeNode> nextNodeQueue = new LinkedList<>();
-        nextNodeQueue.add(root);
+        List<TreeNode> treeNodes;
+        // the next level TreeNode List
+        List<TreeNode> nodes = new LinkedList<>();
+        nodes.add(root);
 
-        while (!nextNodeQueue.isEmpty()) {
+        while (!nodes.isEmpty()) {
             stack.push(integers);
-            treeNodeQueue = nextNodeQueue;
+            treeNodes = nodes;
             integers = new LinkedList<>();
-            nextNodeQueue = new LinkedList<>();
-            while (!treeNodeQueue.isEmpty()) {
-                TreeNode treeNode = ((LinkedList<TreeNode>) treeNodeQueue).pop();
+            nodes = new LinkedList<>();
+            while (!treeNodes.isEmpty()) {
+                TreeNode treeNode = ((LinkedList<TreeNode>) treeNodes).pop();
                 if (treeNode.left != null) {
-                    nextNodeQueue.add(treeNode.left);
+                    nodes.add(treeNode.left);
                     integers.add(treeNode.left.val);
                 }
                 if (treeNode.right != null) {
-                    nextNodeQueue.add(treeNode.right);
+                    nodes.add(treeNode.right);
                     integers.add(treeNode.right.val);
                 }
             }
