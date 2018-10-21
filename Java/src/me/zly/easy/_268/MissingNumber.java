@@ -23,12 +23,14 @@ public class MissingNumber {
 
     public int missingNumber(int[] nums) {
 
-        Arrays.sort(nums);
+        if (nums == null || nums.length == 0) return 0;
+        int length = nums.length;
+        int sum = (1 + length) * length / 2;
 
-        for (int i = 0; i < nums.length; i ++)
-            if (i != nums[i]) return i;
+        int count = 0;
+        for (int i = 0; i < nums.length; i ++) count = count + nums[i];
 
-        return -1;
+        return sum - count;
 
     }
 
