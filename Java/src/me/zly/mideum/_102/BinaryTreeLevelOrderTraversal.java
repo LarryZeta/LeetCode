@@ -1,40 +1,37 @@
-package me.zly.easy._107;
+package me.zly.mideum._102;
+
+import me.zly.definition.TreeNode;
 
 import java.util.LinkedList;
 import java.util.List;
-import java.util.Stack;
-
-import me.zly.definition.TreeNode;
 
 /**
  * @author zly
  *
- * Given a binary tree, return the bottom-up level order traversal of its nodes' values. (ie, from left to right, level by level from leaf to root).
+ * Given a binary tree, return the level order traversal of its nodes' values. (ie, from left to right, level by level).
  *
  * For example:
- *
  * Given binary tree [3,9,20,null,null,15,7],
  *     3
  *    / \
  *   9  20
  *     /  \
  *    15   7
- *
- * return its bottom-up level order traversal as:
+ * return its level order traversal as:
  * [
- *   [15,7],
+ *   [3],
  *   [9,20],
- *   [3]
+ *   [15,7]
  * ]
  */
 
-public class BinaryTreeLevelOrderTraversalII {
+public class BinaryTreeLevelOrderTraversal {
 
-    public List<List<Integer>> levelOrderBottom(TreeNode root) {
+    public List<List<Integer>> levelOrder(TreeNode root) {
 
         if (root == null) return new LinkedList<>();
 
-        Stack<List<Integer>> stack = new Stack<>();
+        List<List<Integer>> lists = new LinkedList<>();
         List<Integer> integers = new LinkedList<>();
         integers.add(root.val);
 
@@ -44,7 +41,7 @@ public class BinaryTreeLevelOrderTraversalII {
         nodes.add(root);
 
         while (!nodes.isEmpty()) {
-            stack.push(integers);
+            lists.add(integers);
             treeNodes = nodes;
             integers = new LinkedList<>();
             nodes = new LinkedList<>();
@@ -60,9 +57,6 @@ public class BinaryTreeLevelOrderTraversalII {
                 }
             }
         }
-
-        List<List<Integer>> lists = new LinkedList<>();
-        while (!stack.isEmpty()) lists.add(stack.pop());
 
         return lists;
 
