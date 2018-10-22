@@ -1,6 +1,7 @@
 package me.zly.mideum._36;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author zly
@@ -58,44 +59,57 @@ import java.util.HashSet;
 public class ValidSudoku {
 
     public boolean isValidSudoku(char[][] board) {
+
+        return isEachRowWithoutRepetition(board) && isEachColWithoutRepetition(board) && isEachGridWithoutRepetition(board);
+
+    }
+
+
+    boolean isEachRowWithoutRepetition(char[][] board) {
         for (int i = 0; i < board.length; i ++) {
-            HashSet<Character> hashSet = new HashSet<>();
+            Set<Character> row = new HashSet<>();
             for (int j = 0; j < board[i].length; j ++) {
-                int size = hashSet.size();
+                int size = row.size();
                 if (board[i][j] != '.') {
-                    hashSet.add(board[i][j]);
-                    if (size == hashSet.size()) return false;
+                    row.add(board[i][j]);
+                    if (size == row.size()) return false;
                 }
             }
         }
+        return true;
+    }
 
+
+    boolean isEachColWithoutRepetition(char[][] board) {
         for (int i = 0; i < board[0].length; i ++) {
-            HashSet<Character> hashSet = new HashSet<>();
+            Set<Character> column = new HashSet<>();
             for (int j = 0; j < board.length; j ++) {
-                int size = hashSet.size();
+                int size = column.size();
                 if (board[j][i] != '.') {
-                    hashSet.add(board[j][i]);
-                    if (size == hashSet.size()) return false;
+                    column.add(board[j][i]);
+                    if (size == column.size()) return false;
                 }
             }
         }
+        return true;
+    }
 
+
+    boolean isEachGridWithoutRepetition(char[][] board) {
         for (int i = 0; i < board.length; i = i + 3) {
             for (int j = 0; j < board[i].length; j = j + 3) {
-                HashSet<Character> hashSet = new HashSet<>();
+                Set<Character> grid = new HashSet<>();
                 for (int k = 0; k < 3; k ++) {
                     for (int l = 0; l < 3; l ++) {
-                        int size = hashSet.size();
+                        int size = grid.size();
                         if (board[i + k][j + l] != '.') {
-                            hashSet.add(board[i + k][j + l]);
-                            if (size == hashSet.size()) return false;
+                            grid.add(board[i + k][j + l]);
+                            if (size == grid.size()) return false;
                         }
                     }
                 }
             }
         }
-
         return true;
     }
-
 }
