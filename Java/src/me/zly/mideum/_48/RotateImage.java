@@ -53,12 +53,12 @@ public class RotateImage {
 
         for (int i = 0; i < matrix.length / 2; i ++) {
             for (int offset = 0; offset < matrix.length / 2 + 1; offset ++)
-                swap(matrix, i, matrix.length - 1 - i,offset);
+                swap4(matrix, i, matrix.length - 1 - i,offset);
         }
 
     }
 
-    void swap(int[][] matrix, int i, int length, int offset) {
+    void swap4(int[][] matrix, int i, int length, int offset) {
         int tmp1 = matrix[i][i + offset];
         matrix[i][i + offset] = matrix[length - offset][i];
         int tmp2 = matrix[i + offset][length];
