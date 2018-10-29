@@ -10,15 +10,16 @@ public class VersionControl {
 
     int n;
 
-    int version = new Random().nextInt() % n;
+    int version;
 
     public VersionControl(int n) {
         this.n = n;
+        this.version = new Random().nextInt() % n;
     }
 
     public boolean isBadVersion(int version) {
 
-        if (version < n) return false;
+        if (version < this.version) return false;
         else return true;
 
     }
