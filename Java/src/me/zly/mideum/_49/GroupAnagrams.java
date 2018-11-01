@@ -1,7 +1,10 @@
 package me.zly.mideum._49;
 
-import java.lang.reflect.Array;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Arrays;
 
 /**
  * @author zly
@@ -31,9 +34,17 @@ public class GroupAnagrams {
 
         if (strs == null || strs.length == 0) return lists;
 
-        Map<String, List> map = new HashSet<String, List>();
+        Map<String, List> map = new HashMap<>();
 
-        return new ArrayList<>();
+        for (String string : strs) {
+            char[] chars = string.toCharArray();
+            Arrays.sort(chars);
+            String key = String.valueOf(chars);
+            if (!map.containsKey(key)) map.put(key, new ArrayList());
+            map.get(key).add(string);
+        }
+
+        return new ArrayList(map.values());
 
     }
 
