@@ -15,6 +15,10 @@ package me.zly.mideum._5;
  *        Output: "bb"
  */
 
+/**
+ * Time limit exceeded.
+ */
+
 public class LongestPalindromicSubstring {
 
     public String longestPalindrome(String s) {
