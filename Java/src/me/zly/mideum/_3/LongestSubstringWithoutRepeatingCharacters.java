@@ -1,6 +1,7 @@
 package me.zly.mideum._3;
 
 import java.util.HashSet;
+import java.util.Set;
 
 /**
  * @author zly
@@ -20,21 +21,22 @@ public class LongestSubstringWithoutRepeatingCharacters {
 
     public int lengthOfLongestSubstring(String s) {
 
-        int length = 0;
+        if (s == null || s.length() == 0) return 0;
 
-        for (int i = 0; i < s.length(); i ++) {
-            for (int j = i ; j < s.length(); j ++) {
-                String substr = s.substring(i, j + 1);
-                HashSet<Character> substrhs = new HashSet<>();
-                int l = substr.length();
-                for (int k = 0; k < l; k ++) substrhs.add(substr.charAt(k));
-                if (l == substrhs.size()) {
-                    if (length < l) length = l;
-                } else break;
-            }
+        int sublength = 0;
+        int i = 0, j = 0;
+        char[] toCharArray = s.toCharArray();
+        Set<Character> set = new HashSet<>();
+
+        while (i < toCharArray.length && j < toCharArray.length) {
+            if (!set.contains(toCharArray[j])) {
+                set.add(toCharArray[j ++]);
+                sublength = Math.max(sublength, j - i);
+            } else set.remove(toCharArray[i ++]);
         }
 
-        return length;
+        return sublength;
+
     }
 
 }
