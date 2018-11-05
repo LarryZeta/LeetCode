@@ -23,7 +23,7 @@ public class LongestPalindromicSubstring {
 
     public String longestPalindrome(String s) {
 
-        if (s == null || s.length() == 0) return "";
+        if (s == null || s.length() == 0 || s.length() == 1) return s;
 
         boolean[][] dp = new boolean[s.length() - 1][s.length()];
 
@@ -33,12 +33,21 @@ public class LongestPalindromicSubstring {
         }
 
         for (int j = 2; j < s.length() - 1; j ++)
-            for (int i = 0; i + j < s.length(); i ++)
-                dp[i][i + j] = dp[i + 1][i + j - 1] && s.charAt(i) == s.charAt(i + j);
+            for (int i = 0; i + j < s.length(); i ++) dp[i][i + j] = dp[i + 1][i + j - 1] && s.charAt(i) == s.charAt(i + j);
 
 
+        int length = 0;
+        String ans = s.substring(0, 1);
+        for (int i = 0; i < s.length() - 1; i ++) {
+            for (int j = s.length() - 1; j > i; j --) {
+                if (dp[i][j] && j + 1 - i > length) {
+                    length = j - i;
+                    ans = s.substring(i, j + 1);
+                }
+            }
+        }
 
-        return s;
+        return ans;
 
     }
 
