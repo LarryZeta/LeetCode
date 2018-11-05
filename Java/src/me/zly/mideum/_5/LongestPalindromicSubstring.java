@@ -25,43 +25,20 @@ public class LongestPalindromicSubstring {
 
         if (s == null || s.length() == 0) return "";
 
-        char initial;
-        int begin = 0;
-        int end = 1;
-        int sublength = 1;
-        int length = s.length();
+        boolean[][] dp = new boolean[s.length() - 1][s.length()];
 
-        for (int i = 0; i < length; i ++) {
-            initial = s.charAt(i);
-            for (int j = length - 1; j > i; j --) {
-                if (s.charAt(j) == initial) {
-                    if (isPalindromic(s.substring(i + 1, j))) {
-                        if (j + 1 - i > sublength){
-                            sublength = j + 1 - i;
-                            begin = i;
-                            end = j + 1;
-                        }
-                        break;
-                    }
-                }
-            }
+        for (int i = 0; i < s.length() - 1; i ++) {
+            dp[i][i] = true;
+            dp[i][i + 1] = s.charAt(i) == s.charAt(i + 1);
         }
 
-        return s.substring(begin, end);
+        for (int j = 2; j < s.length() - 1; j ++)
+            for (int i = 0; i + j < s.length(); i ++)
+                dp[i][i + j] = dp[i + 1][i + j - 1] && s.charAt(i) == s.charAt(i + j);
 
-    }
 
-    public boolean isPalindromic(String s) {
 
-        int length = s.length();
-
-        if (length == 0) return true;
-
-        for (int i = 0; i < length / 2; i ++) {
-            if (s.charAt(i) != s.charAt(length - i - 1)) return false;
-        }
-
-        return true;
+        return s;
 
     }
 
