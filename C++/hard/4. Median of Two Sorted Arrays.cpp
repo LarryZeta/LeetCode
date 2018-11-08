@@ -39,27 +39,15 @@ public:
         int k = 0;
 
         while (j < m && k < n) {
-            if (nums1[j] < nums2[k]) {
-                array[i] = nums1[j];
-                ++ j;
-            } else {
-                array[i] = nums2[k];
-                ++ k;
-            }
-            ++ i;
+            if (nums1[j] < nums2[k]) array[i] = nums1[j ++];
+            else array[i] = nums2[k ++];
+            i ++;
         }
 
-        while (j < m) {
-            array[i] = nums1[j];
-            ++ j;
-            ++ i;
-        }
+        while (j < m) array[i ++] = nums1[j ++];
 
-        while (k < n) {
-            array[i] = nums2[k];
-            ++ k;
-            ++ i;
-        }
+
+        while (k < n) array[i ++] = nums2[k ++];
 
         if (size % 2 == 1) return array[size / 2];
         else return (double)(array[size / 2 - 1] + array[size / 2]) / 2;
