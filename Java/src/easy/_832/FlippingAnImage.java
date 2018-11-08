@@ -1,9 +1,5 @@
 package easy._832;
 
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
-
 /**
  * @author zly
  *
@@ -35,18 +31,13 @@ public class FlippingAnImage {
 
     public int[][] flipAndInvertImage(int[][] A) {
 
-        if (A == null || A.length == 0 || A[0].length == 0) return A;
-
-        for (int i = 0; i < A.length; i ++) {
-            int[] ints =  A[i].clone();
-            for (int j = 0; j < A[i].length; j ++) A[i][j] = ints[ints.length - 1 - j];
-        }
+        int[][] ans = new int[A.length][A[0].length];
 
         for (int i = 0; i < A.length; i ++)
             for (int j = 0; j < A[i].length; j ++)
-                A[i][j] = A[i][j] == 0 ? 1 : 0;
+                ans[i][j] = A[i][A[i].length - 1 - j] ^ 1;
 
-        return A;
+        return ans;
 
     }
 
