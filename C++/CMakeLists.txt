@@ -1,11 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
-project(C__)
+project(C++)
 
 set(CMAKE_CXX_STANDARD 14)
 
 include_directories(.)
 
-add_executable(C__
+add_executable(C++
         "main.cpp"
         "definition/ListNode.h"
         "easy/1. Two Sum.cpp"
@@ -15,4 +15,5 @@ add_executable(C__
         "medium/2. Add Two Numbers.cpp"
         "medium/5. Longest Palindromic Substring.cpp"
         "medium/6. ZigZag Conversion.cpp"
-        "medium/11. Container With Most Water.cpp")
+        "medium/11. Container With Most Water.cpp"
+        "hard/4. Median of Two Sorted Arrays.cpp")
