@@ -45,13 +45,59 @@
 // Thefore INT_MIN (−231) is returned.
 
 #include <string>
+#include <queue>
+#include <climits>
 using namespace std;
 
 class Solution {
 public:
     int myAtoi(string str) {
 
-        return 0;
+        queue<int> q;
+
+        bool* isnegative = NULL;
+
+        for (int i = 0; i < str.size(); i ++) {
+            if (str[i] == ' ' && q.size() == 0 && isnegative == NULL) continue;
+            else if (str[i] == '-') {
+                if (isnegative != NULL || q.size() != 0) break;
+                *isnegative = true;
+                continue;
+            } else if (str[i] == '+') {
+                if (isnegative != NULL || q.size() != 0) break;
+                *isnegative = false;
+                continue;
+            }
+            int num = str[i] - 60;
+            if (num >= 0 && num < 10) q.push(num);
+            else break;
+        }
+
+        if (q.size() == 0) return 0;
+
+        long ret = 0;
+        int tmp;
+
+        if (isnegative == NULL) *isnegative = false;
+        if (*isnegative) {
+            while (q.size() != 0) {
+                tmp = q.front();
+                q.pop();
+                ret *= 10;
+                ret -= tmp;
+                if (ret < INT_MIN) return INT_MIN;
+            }
+        } else {
+            while (q.size() != 0) {
+                tmp = q.front();
+                q.pop();
+                ret *= 10;
+                ret += tmp;
+                if (ret > INT_MAX) return INT_MAX;
+            }
+        }
+
+        return (int)ret;
 
     }
 };
