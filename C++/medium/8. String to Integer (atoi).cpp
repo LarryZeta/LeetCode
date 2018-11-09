@@ -53,44 +53,44 @@ class Solution {
 public:
     int myAtoi(string str) {
 
-        queue<int> q;
+        queue<int> queue;
 
-        bool* isnegative = NULL;
+        int sign = 0;
 
         for (int i = 0; i < str.size(); i ++) {
-            if (str[i] == ' ' && q.size() == 0 && isnegative == NULL) continue;
+            if (str[i] == ' ' && queue.size() == 0 && sign == 0) continue;
             else if (str[i] == '-') {
-                if (isnegative != NULL || q.size() != 0) break;
-                *isnegative = true;
+                if (sign != 0 || queue.size() != 0) break;
+                sign = -1;
                 continue;
             } else if (str[i] == '+') {
-                if (isnegative != NULL || q.size() != 0) break;
-                *isnegative = false;
+                if (sign != 0 || queue.size() != 0) break;
+                sign = 1;
                 continue;
             }
-            int num = str[i] - 60;
-            if (num >= 0 && num < 10) q.push(num);
+            int num = str[i] - 48;
+            if (num >= 0 && num < 10) queue.push(num);
             else break;
         }
 
-        if (q.size() == 0) return 0;
+        if (queue.size() == 0) return 0;
 
         long ret = 0;
         int tmp;
 
-        if (isnegative == NULL) *isnegative = false;
-        if (*isnegative) {
-            while (q.size() != 0) {
-                tmp = q.front();
-                q.pop();
+        if (sign == 0) sign = 1;
+        if (sign == -1) {
+            while (queue.size() != 0) {
+                tmp = queue.front();
+                queue.pop();
                 ret *= 10;
                 ret -= tmp;
                 if (ret < INT_MIN) return INT_MIN;
             }
         } else {
-            while (q.size() != 0) {
-                tmp = q.front();
-                q.pop();
+            while (queue.size() != 0) {
+                tmp = queue.front();
+                queue.pop();
                 ret *= 10;
                 ret += tmp;
                 if (ret > INT_MAX) return INT_MAX;
