@@ -20,10 +20,11 @@
 
 
 #include <vector>
+using namespace std;
 
 class Solution {
 public:
-    int maxArea(std::vector<int>& height) {
+    int maxArea(vector<int>& height) {
 
         int max = 0;
         int left = 0;
@@ -31,7 +32,7 @@ public:
 
         while (left < right)
         {
-            int area = std::min(height[left], height[right]) * (right - left);
+            int area = min(height[left], height[right]) * (right - left);
             if (area > max) max = area;
             if (height[left] < height[right]) ++ left;
             else -- right;
