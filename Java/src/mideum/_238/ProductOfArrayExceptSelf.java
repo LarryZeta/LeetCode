@@ -1,7 +1,5 @@
 package mideum._238;
 
-import java.math.BigInteger;
-
 /**
  * @author zly
  *
@@ -21,11 +19,20 @@ public class ProductOfArrayExceptSelf {
 
     public int[] productExceptSelf(int[] nums) {
 
-        long product = 1;
-        for (int i = 0; i < nums.length; i ++) product = product * nums[i];
+        if (nums == null || nums.length == 0) return new int[0];
+
+        int[] sequence  = new int[nums.length];
+        int[] reverse = new int[nums.length];
+        sequence[0] = nums[0];
+        reverse[reverse.length - 1] = nums[nums.length - 1];
+
+        for (int i = 1; i < sequence.length; i ++) sequence[i] = sequence[i - 1] * nums[i];
+        for (int i = reverse.length - 2; i >= 0; i --) reverse[i] = reverse[i + 1] * nums[i];
 
         int[] output = new int[nums.length];
-        for (int i = 0; i < nums.length; i ++) if (nums[i] != 0) output[i] = (int) (product /(long) nums[i]);
+        output[0] = reverse[1];
+        output[output.length - 1] = sequence[sequence.length - 2];
+        for (int i = 1; i < output.length - 1; i ++) output[i] = sequence[i - 1] * reverse[i + 1];
 
         return output;
 
