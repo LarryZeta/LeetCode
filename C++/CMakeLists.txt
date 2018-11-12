@@ -20,4 +20,5 @@ add_executable(C++
 
         "medium/11. Container With Most Water.cpp"
 
-        "easy/292. Nim Game.cpp")
+        "medium/238. Product of Array Except Self .cpp"
+        "easy/292. Nim Game.cpp" )
