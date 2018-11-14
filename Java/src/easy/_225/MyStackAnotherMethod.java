@@ -32,58 +32,38 @@ import java.util.Queue;
  * Implement Stack using Queues
  */
 
-class MyStack {
+public class MyStackAnotherMethod {
 
     /** Initialize your data structure here. */
-    Queue<Integer> queue1;
-    Queue<Integer> queue2;
-    
-    public MyStack() {
-        this.queue1 = new LinkedList<>();
-        this.queue2 = new LinkedList<>();
+    Queue<Integer> queue;
+
+    public MyStackAnotherMethod() {
+        this.queue = new LinkedList<>();
     }
 
     /** Push element x onto stack. */
     public void push(int x) {
 
-        if (queue1.size() >= queue2.size()) queue1.add(x);
-        else queue2.add(x);
+        Queue<Integer> tempQueue = new LinkedList<>();
+        while (!queue.isEmpty()) tempQueue.add(queue.poll());
+        queue.add(x);
+        while (!tempQueue.isEmpty()) queue.add(tempQueue.poll());
 
     }
 
     /** Removes the element on top of the stack and returns that element. */
     public int pop() {
-
-        if (queue1.size() >= queue2.size()){
-            while (queue1.size() > 1) queue2.add(queue1.poll());
-            return queue1.poll();
-        } else {
-            while (queue2.size() > 1) queue1.add(queue2.poll());
-            return queue2.poll();
-        }
-
+        return queue.poll();
     }
 
     /** Get the top element. */
     public int top() {
-
-        int top;
-        if (queue1.size() >= queue2.size()){
-            while (queue1.size() > 1) queue2.add(queue1.poll());
-            top = queue1.peek();
-            queue2.add(queue1.poll());
-        } else {
-            while (queue2.size() > 1) queue1.add(queue2.poll());
-            top = queue2.peek();
-            queue1.add(queue2.poll());
-        }
-        return top;
-
+        return queue.peek();
     }
 
     /** Returns whether the stack is empty. */
     public boolean empty() {
-        return queue1.isEmpty() && queue2.isEmpty();
+        return queue.isEmpty();
     }
 }
 
@@ -95,3 +75,5 @@ class MyStack {
  * int param_3 = obj.top();
  * boolean param_4 = obj.empty();
  */
+
+
