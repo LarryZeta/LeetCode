@@ -1,10 +1,10 @@
 package easy._107;
 
-import java.util.LinkedList;
+import java.util.Collections;
 import java.util.List;
-import java.util.Stack;
 
 import definition.TreeNode;
+import mideum._102.BinaryTreeLevelOrderTraversal;
 
 /**
  * @author zly
@@ -32,37 +32,9 @@ public class BinaryTreeLevelOrderTraversalII {
 
     public List<List<Integer>> levelOrderBottom(TreeNode root) {
 
-        if (root == null) return new LinkedList<>();
+        List<List<Integer>> lists = new BinaryTreeLevelOrderTraversal().levelOrder(root);
 
-        Stack<List<Integer>> stack = new Stack<>();
-        List<Integer> integers = new LinkedList<>();
-        integers.add(root.val);
-
-        List<TreeNode> treeNodes;
-        // the next level TreeNode List
-        List<TreeNode> nodes = new LinkedList<>();
-        nodes.add(root);
-
-        while (!nodes.isEmpty()) {
-            stack.push(integers);
-            treeNodes = nodes;
-            integers = new LinkedList<>();
-            nodes = new LinkedList<>();
-            while (!treeNodes.isEmpty()) {
-                TreeNode treeNode = ((LinkedList<TreeNode>) treeNodes).pop();
-                if (treeNode.left != null) {
-                    nodes.add(treeNode.left);
-                    integers.add(treeNode.left.val);
-                }
-                if (treeNode.right != null) {
-                    nodes.add(treeNode.right);
-                    integers.add(treeNode.right.val);
-                }
-            }
-        }
-
-        List<List<Integer>> lists = new LinkedList<>();
-        while (!stack.isEmpty()) lists.add(stack.pop());
+        Collections.reverse(lists);
 
         return lists;
 
