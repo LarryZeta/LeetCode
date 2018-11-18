@@ -8,13 +8,10 @@ import java.util.Random;
 
 public class VersionControl {
 
-    int n;
-
     int version;
 
     public VersionControl(int n) {
-        this.n = n;
-        this.version = new Random().nextInt() % n;
+        this.version = new Random().nextInt(n);
     }
 
     public boolean isBadVersion(int version) {
