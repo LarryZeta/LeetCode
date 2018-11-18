@@ -3,7 +3,7 @@ package definition;
 import java.util.Random;
 
 /**
- * Implementation the isBadVersion API @_278.FirstBadVersion
+ * Implementation the isBadVersion API @easy._278.FirstBadVersion.
  */
 
 public class VersionControl {
