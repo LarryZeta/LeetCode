@@ -12,9 +12,7 @@ package easy._231;
 public class PowerOfTwo {
 
     public boolean isPowerOfTwo(int n) {
-        if (n == 1) return true;
-        else if (n <= 0 || n % 2 != 0) return false;
-        else return isPowerOfTwo(n >> 1);
+        return n > 0 && (n & n - 1) == 0;
     }
 
 }
