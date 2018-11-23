@@ -40,7 +40,7 @@ public class ConstructQuadTree {
 
         Node root = new Node();
 
-        construct(root, grid, new Coordinate(0, 0), new Coordinate(grid[0].length - 1, grid.length - 1);
+        //construct(root, grid, new Coordinate(0, 0), new Coordinate(grid[0].length - 1, grid.length - 1);
 
         return root;
 
@@ -58,7 +58,7 @@ public class ConstructQuadTree {
     Node construct(Node root , int[][] grid, Coordinate topleft, Coordinate butright) {
 
         
-
+        return null;
     }
 
 }
