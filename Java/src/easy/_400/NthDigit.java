@@ -31,6 +31,8 @@ package easy._400;
 public class NthDigit {
 
     public int findNthDigit(int n) {
+		
+		if (n < 10) return n;
         return 0;
     }
 
