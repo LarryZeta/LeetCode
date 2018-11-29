@@ -1,6 +1,7 @@
 package easy._20;
 
 import java.util.HashMap;
+import java.util.Stack;
 
 /**
  * @author zly
@@ -34,40 +35,30 @@ import java.util.HashMap;
  *        Output: true
  */
 
-// TODO
 public class ValidParentheses {
 
     public boolean isValid(String s) {
 
-        HashMap<Character, Integer> priority = new HashMap<>();
-        priority.put('(', 1);
-        priority.put(')', -1);
-        priority.put('[', 2);
-        priority.put(']', -2);
-        priority.put('{', 3);
-        priority.put('}', -3);
+        Stack<Character> stack = new Stack<>();
+        HashMap<Character, Character> hashMap = new HashMap<>();
+        hashMap.put('(', ')');
+        hashMap.put('[', ']');
+        hashMap.put('{', '}');
 
-        int value = 0;
 
         for (int i = 0; i < s.length(); i ++) {
-            value = value + priority.get(s.charAt(i));
-            if (value < 0) return false;
-
-        }
-
-        for (int i = 0; i < s.length() - 1; i ++) {
-            int now = priority.get(s.charAt(i));
-            int next = priority.get(s.charAt(i + 1));
-            // with priority.
-            if (now * next > 0 && now < next) return false;
-
-            if (now > 0 && next < 0) {
-                if (now + next != 0) return false;
+            if (hashMap.containsKey(s.charAt(i))) {
+                stack.push(s.charAt(i));
             }
-            if (now < 0 && next > 0) ++ i;
+            if (hashMap.containsValue(s.charAt(i))) {
+                if (stack.empty() || s.charAt(i) != hashMap.get(stack.pop())) {
+                    return false;
+                }
+            }
         }
 
-        if (value == 0) return true;
+        if (stack.empty())
+            return true;
 
         return false;
     }
