@@ -19,11 +19,29 @@ import definition.ListNode;
  * Recursive solution.
  */
 
-// TODO
 public class ReverseLinkedListRecursive {
 
     public ListNode reverseList(ListNode head) {
-        return null;
+
+        if (head == null || head.next == null) return head;
+        else {
+            ListNode rear = head;
+            while (rear.next != null) rear = rear.next;
+            reverse(head);
+            return rear;
+        }
+
+    }
+
+    ListNode reverse(ListNode node) {
+
+        if (node.next == null) return node;
+        else {
+            reverse(node.next).next = node;
+            node.next = null;
+            return node;
+        }
+
     }
 
 }
