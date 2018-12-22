@@ -39,10 +39,11 @@ public class WordPattern {
 
         Map<Character, String> map = new HashMap<>();
         for (int i = 0; i < pattern.length(); i ++) {
-            if (map.containsKey(pattern.charAt(i))) {
-                if (!map.get(pattern.charAt(i)).equals(strs[i])) return false;
+            char charAt = pattern.charAt(i);
+            if (map.containsKey(charAt)) {
+                if (!map.get(charAt).equals(strs[i])) return false;
             } else if (map.containsValue(strs[i])) return false;
-            else map.put(pattern.charAt(i), strs[i]);
+            else map.put(charAt, strs[i]);
         }
 
         return true;
