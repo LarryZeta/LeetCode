@@ -19,16 +19,7 @@ public class AddDigits {
 
     public int addDigits(int num) {
 
-        while (num > 9) {
-            int tmp = 0;
-            while (num > 0) {
-                tmp = tmp + num % 10;
-                num = num / 10;
-            }
-            num = tmp;
-        }
-
-        return num;
+        return (num - 1) % 9 + 1;
 
     }
 
