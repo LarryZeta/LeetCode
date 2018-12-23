@@ -29,21 +29,31 @@ public class ReverseVowelsOfAString {
 
     public String reverseVowels(String s) {
 
-
         Set<Character> set = new HashSet<>();
         set.addAll(Arrays.asList('a', 'A', 'e', 'E', 'i', 'I', 'o', 'O', 'u', 'U'));
-        Stack<Character> stack = new Stack<>();
-        Queue<Integer> queue = new LinkedList<>();
+
         char[] chars = s.toCharArray();
+        int left = 0;
+        int right = chars.length - 1;
+        while (left < right) {
 
-        for (int i = 0; i < chars.length; i ++) {
-            if (set.contains(chars[i])) {
-                stack.push(chars[i]);
-                ((LinkedList<Integer>) queue).add(i);
+            if (!set.contains(chars[left])) {
+                left ++;
+                continue;
             }
-        }
+            if (!set.contains(chars[right])) {
+                right --;
+                continue;
+            }
 
-        while (!stack.empty() && !queue.isEmpty()) chars[((LinkedList<Integer>) queue).pop()] = stack.pop();
+            char tmp = chars[left];
+            chars[left] = chars[right];
+            chars[right] = tmp;
+
+            left ++;
+            right --;
+
+        }
 
         return String.copyValueOf(chars);
 
