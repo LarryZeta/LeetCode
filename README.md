@@ -1,6 +1,5 @@
 LeetCode
 ========
-Personal LeetCode solution.
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
 |500|[Keyboard Row](https://leetcode.com/problems/keyboard-row/) | [Java](./Java/src/easy/_500/KeyboardRow.java) |Easy|
@@ -47,10 +46,8 @@ Personal LeetCode solution.
 |191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)| [Java](./Java/src/easy/_191/NumberOf1Bits.java)|Easy|
 |190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/)| [Java](./Java/src/easy/_190/ReverseBits.java)|Easy|
 |189|[Rotate Array](https://leetcode.com/problems/rotate-array/)| [Java](./Java/src/easy/_189/RotateArray.java)|Easy|
-<!-- |175|[Combine Two Tables](https://leetcode.com/problems/combine-two-tables/) | [java](./java/src/easy/_175/CombineTwoTables.java)|Easy| -->
 |172|[Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/) | [Java](./Java/src/easy/_172/FactorialTrailingZeroes.java)|Easy|
 |171|[Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | [Java](./Java/src/easy/_171/ExcelSheetColumnNumber.java)|Easy|
-<!-- |170|[Two Sum III - Data structure design](https://leetcode.com/problems/two-sum-iii-data-structure-design/) | [Java](./Java/src/easy/_170/TwoSumIII.java)|Easy| -->
 |169|[Majority Element](https://leetcode.com/problems/majority-element/) | [Java](./Java/src/easy/_169/MajorityElement.java)|Easy|
 |168|[Excel Sheet Column Title](https://leetcode.com/problems/excel-sheet-column-title/) | [Java](./Java/src/easy/_168/ExcelSheetColumnTitle.java)|Easy|
 |167|[Two Sum II - Input array is sorted](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/) | [Java](./Java/src/easy/_167/TwoSumII_InputArrayIsSorted.java)|Medium|
