@@ -2,7 +2,7 @@ LeetCode
 ========
 | # | Title | Solution | Difficulty |
 |---| ----- | -------- | ---------- |
-|500|[Keyboard Row](https://leetcode.com/problems/keyboard-row/) | [Java](https://github.com/LarryZeta/LeetCode/Java/src/easy/_500/KeyboardRow.java) |Easy|
+|500|[Keyboard Row](https://leetcode.com/problems/keyboard-row/) | [Java](./blob/master/Java/src/easy/_500/KeyboardRow.java) |Easy|
 |461|[Hamming Distance](https://leetcode.com/problems/hamming-distance/) | [Java](https://github.com/LarryZeta/LeetCode/Java/src/easy/_461/HammingDistance.java/)|Easy|
 |412|[Fizz Buzz](https://leetcode.com/problems/fizz-buzz/) | [Java](https://github.com/LarryZeta/LeetCode/Java/src/easy/_412/FizzBuzz.java)|Easy|
 |389|[Find the Difference](https://leetcode.com/problems/find-the-difference/) | [Java](https://github.com/LarryZeta/LeetCode/Java/src/easy/_389/FindTheDifference.java)|Easy|
