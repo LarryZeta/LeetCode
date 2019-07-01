@@ -45,7 +45,7 @@ LeetCode
 |198|[House Robber](https://leetcode.com/problems/house-robber/)| [Java](./Java/src/easy/_198/HouseRobber.java)|Easy|
 |191|[Number of 1 Bits](https://leetcode.com/problems/number-of-1-bits/)| [Java](./Java/src/easy/_191/NumberOf1Bits.java)|Easy|
 |190|[Reverse Bits](https://leetcode.com/problems/reverse-bits/)| [Java](./Java/src/easy/_190/ReverseBits.java)|Easy|
-|189|[Rotate Array](https://leetcode.com/problems/rotate-array/)| [Java](./Java/src/easy/_189/RotateArray.java)|Easy|
+|189|[Rotate Array](https://leetcode.com/problems/rotate-array/)| [Java](./FJava/src/easy/_189/RotateArray.java)|Easy|
 |172|[Factorial Trailing Zeroes](https://leetcode.com/problems/factorial-trailing-zeroes/) | [Java](./Java/src/easy/_172/FactorialTrailingZeroes.java)|Easy|
 |171|[Excel Sheet Column Number](https://leetcode.com/problems/excel-sheet-column-number/) | [Java](./Java/src/easy/_171/ExcelSheetColumnNumber.java)|Easy|
 |169|[Majority Element](https://leetcode.com/problems/majority-element/) | [Java](./Java/src/easy/_169/MajorityElement.java)|Easy|
