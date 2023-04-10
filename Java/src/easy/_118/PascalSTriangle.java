@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a non-negative integer numRows, generate the first numRows of Pascal's triangle.
  *

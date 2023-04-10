@@ -3,7 +3,7 @@ package easy._242;
 import java.util.Arrays;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given two strings s and t , write a function to determine if t is an anagram of s.
  *

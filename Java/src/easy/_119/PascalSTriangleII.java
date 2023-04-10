@@ -5,7 +5,7 @@ import easy._118.PascalSTriangle;
 import java.util.List;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a non-negative index k where k ≤ 33, return the kth index row of the Pascal's triangle.
  *

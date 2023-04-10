@@ -1,7 +1,7 @@
 package easy._225;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Implement the following operations of a stack using queues.
  *

@@ -3,7 +3,7 @@ package mideum._384;
 import java.util.Random;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Shuffle a set of numbers without duplicates.
  *

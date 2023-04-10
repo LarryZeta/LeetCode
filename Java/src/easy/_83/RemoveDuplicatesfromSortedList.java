@@ -3,7 +3,7 @@ package easy._83;
 import definition.ListNode;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a sorted linked list, delete all duplicates such that each element appear only once.
  *

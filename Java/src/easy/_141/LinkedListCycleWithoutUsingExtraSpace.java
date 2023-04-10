@@ -3,7 +3,7 @@ package easy._141;
 import definition.ListNode;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a linked list, determine if it has a cycle in it.
  */

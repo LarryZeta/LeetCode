@@ -3,7 +3,7 @@ package easy._427;
 import definition.Node;
 
 /**
- * @author zly
+ * @author Larry
  *
  * We want to use quad trees to store an N x N boolean grid. Each cell in the grid can only be true or false. The root node represents the whole grid. For each node, it will be subdivided into four children nodes until the values in the region it represents are all the same.
  *

@@ -1,7 +1,7 @@
 package easy._69;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Implement int sqrt(int x).
  *

@@ -1,7 +1,7 @@
 package easy._303;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Range Sum Query - Immutable
  *

@@ -3,7 +3,7 @@ package easy._204;
 import java.util.Arrays;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Count the number of prime numbers less than a non-negative number, n.
  *

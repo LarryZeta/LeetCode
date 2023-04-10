@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Write a program that outputs the string representation of numbers from 1 to n.
  *

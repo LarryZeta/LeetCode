@@ -1,7 +1,7 @@
 package easy._28;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Implement strStr().
  *

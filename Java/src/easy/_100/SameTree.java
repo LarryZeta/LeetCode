@@ -3,7 +3,7 @@ package easy._100;
 import definition.TreeNode;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given two binary trees, write a function to check if they are the same or not.
  *

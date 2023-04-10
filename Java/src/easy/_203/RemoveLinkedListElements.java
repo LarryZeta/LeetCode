@@ -3,7 +3,7 @@ package easy._203;
 import definition.ListNode;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Remove all elements from a linked list of integers that have value val.
  *

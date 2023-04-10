@@ -3,7 +3,7 @@ package easy._101;
 import definition.TreeNode;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
  *

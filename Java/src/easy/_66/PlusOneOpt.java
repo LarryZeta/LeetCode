@@ -1,7 +1,7 @@
 package easy._66;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a non-empty array of digits representing a non-negative integer, plus one to the integer.
  *

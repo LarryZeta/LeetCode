@@ -9,7 +9,7 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Write a function that takes a string as input and reverse only the vowels of a string.
  *

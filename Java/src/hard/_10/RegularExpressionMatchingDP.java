@@ -1,7 +1,7 @@
 package hard._10;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given an input string (s) and a pattern (p), implement regular expression matching with support for '.' and '*'.
  *

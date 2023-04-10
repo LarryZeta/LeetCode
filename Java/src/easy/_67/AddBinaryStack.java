@@ -3,7 +3,7 @@ package easy._67;
 import java.util.Stack;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given two binary strings, return their sum (also a binary string).
  *

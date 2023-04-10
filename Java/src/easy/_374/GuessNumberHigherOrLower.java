@@ -1,7 +1,7 @@
 package easy._374;
 
 /**
- * @author zly
+ * @author Larry
  *
  * We are playing the Guess Game. The game is as follows:
  *

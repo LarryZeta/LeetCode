@@ -3,7 +3,7 @@ package easy._232;
 import java.util.Stack;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Implement the following operations of a queue using stacks.
  *

@@ -1,7 +1,7 @@
 package mideum._29;
 
 /**
- * @author zly 
+ * @author Larry 
  *
  * Given two integers dividend and divisor, divide two integers without using multiplication, division and mod operator.
  *

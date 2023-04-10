@@ -3,7 +3,7 @@ package easy._168;
 import java.util.Stack;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a positive integer, return its corresponding column title as appear in an Excel sheet.
  *

@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given two strings s and t, determine if they are isomorphic.
  *

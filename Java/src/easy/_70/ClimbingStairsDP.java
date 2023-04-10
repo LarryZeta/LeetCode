@@ -1,7 +1,7 @@
 package easy._70;
 
 /**
- * @author zly
+ * @author Larry
  *
  * You are climbing a stair case. It takes n steps to reach to the top.
  *

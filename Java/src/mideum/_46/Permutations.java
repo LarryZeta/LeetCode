@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a collection of distinct integers, return all possible permutations.
  *

@@ -3,7 +3,7 @@ package easy._206;
 import definition.ListNode;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Reverse a singly linked list.
  *

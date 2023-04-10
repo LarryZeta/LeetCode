@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given two arrays, write a function to compute their intersection.
  *

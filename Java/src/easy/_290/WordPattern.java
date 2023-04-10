@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a pattern and a string str, find if str follows the same pattern.
  *

@@ -1,7 +1,7 @@
 package easy._371;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Calculate the sum of two integers a and b, but you are not allowed to use the operator + and -.
  *

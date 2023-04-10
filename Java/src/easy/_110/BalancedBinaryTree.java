@@ -3,7 +3,7 @@ package easy._110;
 import definition.TreeNode;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a binary tree, determine if it is height-balanced.
  *

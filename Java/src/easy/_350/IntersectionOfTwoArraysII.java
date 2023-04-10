@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given two arrays, write a function to compute their intersection.
  *

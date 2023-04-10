@@ -3,7 +3,7 @@ package easy._217;
 import java.util.HashSet;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given an array of integers, find if the array contains any duplicates.
  *

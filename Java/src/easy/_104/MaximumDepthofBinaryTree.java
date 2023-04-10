@@ -3,7 +3,7 @@ package easy._104;
 import definition.TreeNode;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a binary tree, find its maximum depth.
  *

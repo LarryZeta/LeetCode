@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.LinkedList;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Implement atoi which converts a string to an integer.
  *

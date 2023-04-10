@@ -5,7 +5,7 @@ import java.util.HashSet;
 import java.util.List;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Write an algorithm to determine if a number is "happy".
  *

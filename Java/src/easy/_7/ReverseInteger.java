@@ -1,7 +1,7 @@
 package easy._7;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a 32-bit signed integer, reverse digits of an integer.
  *

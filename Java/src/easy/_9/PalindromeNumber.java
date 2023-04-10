@@ -3,7 +3,7 @@ package easy._9;
 import easy._7.ReverseInteger;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Determine whether an integer is a palindrome. An integer is a palindrome when it reads the same backward as forward.
  *

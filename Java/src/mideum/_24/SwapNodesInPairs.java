@@ -3,7 +3,7 @@ package mideum._24;
 import definition.ListNode;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a linked list, swap every two adjacent nodes and return its head.
  *

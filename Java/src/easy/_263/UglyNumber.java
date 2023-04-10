@@ -1,7 +1,7 @@
 package easy._263;
 
 /**
- * @author zly 
+ * @author Larry 
  *
  * Write a program to check whether a given number is an ugly number.
  *

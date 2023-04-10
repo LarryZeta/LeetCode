@@ -5,7 +5,7 @@ import definition.ListNode;
 import java.util.Stack;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Reverse a singly linked list.
  *

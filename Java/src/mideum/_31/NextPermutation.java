@@ -1,7 +1,7 @@
 package mideum._31;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Implement next permutation, which rearranges numbers into the lexicographically next greater permutation of numbers.
  *

@@ -5,7 +5,7 @@ import definition.TreeNode;
 import java.util.Stack;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a binary tree, check whether it is a mirror of itself (ie, symmetric around its center).
  *

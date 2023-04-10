@@ -3,7 +3,7 @@ package easy._136;
 import java.util.Arrays;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a non-empty array of integers, every element appears twice except for one. Find that single one.
  *

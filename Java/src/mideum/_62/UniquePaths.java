@@ -3,7 +3,7 @@ package mideum._62;
 import java.math.BigInteger;
 
 /**
- * @author zly
+ * @author Larry
  *
  * A robot is located at the top-left corner of a m x n grid (marked 'Start' in the diagram below).
  *

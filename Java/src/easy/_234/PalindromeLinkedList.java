@@ -5,7 +5,7 @@ import definition.ListNode;
 import java.util.Stack;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a singly linked list, determine if it is a palindrome.
  *

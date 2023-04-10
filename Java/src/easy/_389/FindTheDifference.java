@@ -3,7 +3,7 @@ package easy._389;
 import java.util.Arrays;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given two strings s and t which consist of only lowercase letters.
  *

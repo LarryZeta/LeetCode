@@ -5,7 +5,7 @@ import definition.ListNode;
 import java.util.HashSet;
 
 /**
- * @author zly
+ * @author Larry
  *
  * Given a linked list, determine if it has a cycle in it.
  *
