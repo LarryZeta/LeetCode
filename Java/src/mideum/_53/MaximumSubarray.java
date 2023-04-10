@@ -1,4 +1,4 @@
-package easy._53;
+package mideum._53;
 
 /**
  * @author Larry
